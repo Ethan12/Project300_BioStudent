@@ -32,5 +32,7 @@ namespace Project300_BioStudent.Models
         [Compare("Password", ErrorMessage = "Password don't match!")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
+
+        public int FingerprintID { get; set; }
     }
 }

@@ -46,14 +46,22 @@ namespace Project300_BioStudent.Controllers
         {
             using (StudentDbContext db = new StudentDbContext())
             {
-                var studentusr = db.StudentUserAccounts.Single(u => u.StudentNum == studentUser.StudentNum && u.Password == studentUser.Password);
-                if (studentusr != null)
+                try
                 {
-                    Session["Id"] = studentusr.Id.ToString();
-                    Session["FullName"] = studentusr.FullName.ToString();
-                    return RedirectToAction("LoggedIn");
+                    var studentusr = db.StudentUserAccounts.Single(u => u.StudentNum == studentUser.StudentNum && u.Password == studentUser.Password);
+                    if (studentusr != null)
+                    {
+                        Session["Id"] = studentusr.Id.ToString();
+                        Session["FullName"] = studentusr.FullName.ToString();
+                        Session["FingerprintID"] = studentusr.FingerprintID.ToString();
+                        return RedirectToAction("LoggedIn");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Student Number or Password is incorrect!");
+                    }
                 }
-                else
+                catch(InvalidOperationException ie)
                 {
                     ModelState.AddModelError("", "Student Number or Password is incorrect!");
                 }
