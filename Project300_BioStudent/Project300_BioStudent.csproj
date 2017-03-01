@@ -245,7 +245,6 @@
     <Content Include="Views\Student\StudentRegister.cshtml" />
     <Content Include="Views\Student\StudentLogin.cshtml" />
     <Content Include="Views\Student\LoggedIn.cshtml" />
-    <Content Include="Views\Student\Test.cshtml" />
     <Content Include="Views\Student\Enroll.cshtml" />
   </ItemGroup>
   <ItemGroup>
