@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Enroll";
 
     var urlPhoton = "https://api.particle.io/v1/devices?access_token=0ab4defa662936517739b7f732e14a199e30b4ce"
@@ -9,7 +8,7 @@
 
     var connected = "";
 
-    foreach(var p in log[0])
+    foreach (var p in log[0])
     {
         connected = p.connected;
     }
@@ -25,4 +24,3 @@
         </dl>
     </div>
 }
-
