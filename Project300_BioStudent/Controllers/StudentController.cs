@@ -68,6 +68,10 @@ namespace Project300_BioStudent.Controllers
             }
             return View();
         }
+        public ActionResult Enroll()
+        {
+            return View();
+        }
 
         public ActionResult LoggedIn()
         {
