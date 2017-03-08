@@ -209,6 +209,12 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="images\Attendance.JPG" />
+    <Content Include="images\BioStudent_Logo.png" />
+    <Content Include="images\default.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\folderDefault.png" />
+    <Content Include="images\LoginRegistrationImage.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -264,7 +270,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
