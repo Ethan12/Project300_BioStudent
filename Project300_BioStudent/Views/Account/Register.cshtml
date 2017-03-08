@@ -3,56 +3,116 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
-
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title.</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/styles/StyleSheet.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
+                    <a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
+                        <img class="logo" src="~/images/BioStudent_Logo.png" /></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
+                        <!--<li>
+                            <div class="line">|</div>
+                        </li>-->
+                        <li>@Html.ActionLink("Lecture Register", "Login", "Account")</li>
+                        <!--<li>
+                            <div class="line">|</div>
+                        </li>-->
+                        <li>
+                            <a href="LecturerProfile.html">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="jumbotron backColour">
+        <header class="headerStyle">
+            <!--<div class="container">-->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Lecturer Registration</h1>
+                        <p class="small" />
+                        <span class="subheading">Already a member? <a href="~/Account/Login">Log-in</a></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="jumbotron backColour2">
+        <div>
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Lecturer's Registration</h4>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.TeachingField, new { @class = "form-control" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Institute, new { @class = "form-control" })
         </div>
-    </div>
-    @Html.ValidationSummary("", new { @class = "text-danger" })
+            </div>
+            @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" }) 
+        </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-default" value="Register" />
+                </div>
+            </div>
+            }
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+</body>
+</html>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
