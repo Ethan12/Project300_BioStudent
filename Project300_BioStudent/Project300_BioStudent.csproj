@@ -215,6 +215,7 @@
     <Content Include="images\favicon.ico" />
     <Content Include="images\folderDefault.png" />
     <Content Include="images\LoginRegistrationImage.JPG" />
+    <Content Include="JavaScript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
