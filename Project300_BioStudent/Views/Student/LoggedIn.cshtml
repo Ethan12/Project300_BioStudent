@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "LoggedIn";
     
 }
@@ -11,12 +10,12 @@
         <h4>Student Management</h4>
         <hr />
         <dl class="dl-horizontal">
-            <dt>Fingerprint:</dt>
+            <dt>Finger Print:</dt>
             <dd>
                 [
                 @if (Convert.ToInt32(Session["FingerprintID"].ToString()) == -1)
                 {
-                    @Html.ActionLink("Enroll your fingerprint", "Enroll")
+                    @Html.ActionLink("Enroll your fingerprint", "Enroll");
                 }
                 else
                 {
