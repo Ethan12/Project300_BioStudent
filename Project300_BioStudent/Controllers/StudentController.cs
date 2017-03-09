@@ -72,6 +72,10 @@ namespace Project300_BioStudent.Controllers
         {
             return View();
         }
+        public ActionResult StudentList()
+        {
+            return View();
+        }
 
         public ActionResult LoggedIn()
         {

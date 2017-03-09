@@ -265,9 +265,14 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Student\StudentRegister.cshtml" />
-    <Content Include="Views\Student\StudentLogin.cshtml" />
+    <Content Include="Views\Student\StudentLogin.cshtml">
+      <BrowseToURL>~/Student/StudentLogin</BrowseToURL>
+    </Content>
     <Content Include="Views\Student\LoggedIn.cshtml" />
-    <Content Include="Views\Student\Enroll.cshtml" />
+    <Content Include="Views\Student\Enroll.cshtml">
+      <BrowseToURL>~/Student/Enroll</BrowseToURL>
+    </Content>
+    <Content Include="Views\Student\StudentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
