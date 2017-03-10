@@ -273,6 +273,7 @@
       <BrowseToURL>~/Student/Enroll</BrowseToURL>
     </Content>
     <Content Include="Views\Student\StudentList.cshtml" />
+    <Content Include="Views\Account\LecturerProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
