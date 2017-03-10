@@ -75,6 +75,9 @@ namespace Project300_BioStudent.Controllers
         public ActionResult StudentList()
         {
             return View();
+            //    var students = new StudentDbContext();
+            //    return View(students.StudentUserAccounts.ToList());
+            //
         }
 
         public ActionResult LoggedIn()
