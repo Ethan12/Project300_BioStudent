@@ -42,7 +42,7 @@ h2 {
 }
 
 .greenText {
-    color:#66CD00;
+    color:grey;
 }
 
 .blueText {
@@ -127,6 +127,7 @@ body {
     font-family: 'Verdana Pro';
     margin-left: 120px;
     margin-right: 120px;
+    color:grey;
 }
 
 .style {

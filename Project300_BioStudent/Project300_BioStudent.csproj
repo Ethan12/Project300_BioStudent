@@ -214,6 +214,7 @@
     <Content Include="images\default.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\folderDefault.png" />
+    <Content Include="images\HomeImg.png" />
     <Content Include="images\LoginRegistrationImage.JPG" />
     <Content Include="images\MainImg.png" />
     <Content Include="JavaScript.js" />
