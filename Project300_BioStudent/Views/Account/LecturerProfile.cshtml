@@ -27,20 +27,12 @@
                         <img class="logo" src="~/images/BioStudent_Logo.png" />
                     </a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <!--<li>
-                            <div class="line">|</div>
-                        </li>-->
-                        <li>@Html.ActionLink("Lecture Register", "Login", "Account")</li>
-                        <!--<li>
-                            <div class="line">|</div>
-                        </li>-->
-                        <li>
-                            <a href="LecturerProfile.html">Profile</a>
-                        </li>
+                        <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
+                        <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
                     </ul>
                 </div>
             </div>

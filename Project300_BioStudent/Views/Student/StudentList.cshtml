@@ -24,22 +24,17 @@
                     </button>
                     <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
                     <a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
-                        <img class="logo" src="~/images/BioStudent_Logo.png" /></a>
+                        <img class="logo" src="~/images/BioStudent_Logo.png" />
+                    </a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <!--<li>
-                            <div class="line">|</div>
-                        </li>-->
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                        <!--<li>
-                            <div class="line">|</div>
-                        </li>-->
-                        <li>
-                            <a href="LecturerProfile.html">Profile</a>
-                        </li>
+                        @*<li>
+                                <a href="LecturerProfile.html">Profile</a>
+                            </li>*@
                     </ul>
                 </div>
             </div>
@@ -47,13 +42,10 @@
     </div>
     <div class="jumbotron backColour">
         <header class="headerStyle">
-            <!--<div class="container">-->
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
                         <h1>Student Listing</h1>
-                        <!--<p class="small" />
-                        <span class="subheading">Already a member? <a href="~/Account/Login">Log-in</a></span>-->
                     </div>
                 </div>
             </div>
@@ -61,28 +53,28 @@
     </div>
     <div class="jumbotron backColour2">
         <div>
-            @using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        @*<h4>Student Login</h4>
-        *@
-        <hr />
-        <section>This is where the student listing will be</section>
-        @*<!--<table>
-            <tr>
-                <th>Student Name</th>
-            </tr>
-            @foreach(var student in Model)
+            @using (Html.BeginForm())
             {
-            <tr>
-                <td>@studentList.FullName</td>
-            </tr>
-            }
+                @Html.AntiForgeryToken()
 
-        </table>-->*@
-    </div>
+                <div class="form-horizontal">
+                    @*<h4>Student Login</h4>
+                    *@
+                    <hr />
+                    <section>This is where the student listing will be</section>
+                    @*<!--<table>
+                            <tr>
+                                <th>Student Name</th>
+                            </tr>
+                            @foreach(var student in Model)
+                            {
+                            <tr>
+                                <td>@studentList.FullName</td>
+                            </tr>
+                            }
+
+                        </table>-->*@
+                </div>
             }
         </div>
     </div>

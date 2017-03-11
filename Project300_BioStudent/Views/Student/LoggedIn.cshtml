@@ -15,7 +15,7 @@
                 [
                 @if (Convert.ToInt32(Session["FingerprintID"].ToString()) == -1)
                 {
-                    @Html.ActionLink("Enroll your fingerprint", "Enroll");
+                    @Html.ActionLink("Enroll your fingerprint", "Enroll", "Student");
                 }
                 else
                 {

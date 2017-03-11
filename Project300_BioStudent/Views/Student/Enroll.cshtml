@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Project300_BioStudent.Models.StudentUserAccount
+@{
     ViewBag.Title = "Enroll";
 }
 @{
@@ -6,14 +7,14 @@
     var urlPhoton = "https://api.particle.io/v1/devices?access_token=0ab4defa662936517739b7f732e14a199e30b4ce";
     var PhotonContent = Url.Content(urlPhoton);
 
-    @*var log = Json.Decode(PhotonContent);
+    var log = Json.Decode(PhotonContent);
 
     var connected = "";
 
     foreach (var p in log[0])
     {
         connected = p.connected;
-    }*@
+    }
 }
 
 @if (Session["Id"] != null)
@@ -22,7 +23,7 @@
         <h3>Enroll</h3>
         <hr />
         <dl class="dl-horizontal">
-            <dt>@string.Format("{0}")</dt> @*, connected)</dt>*@
+            <dt>@string.Format("{0}"), connected)</dt>
         </dl>
     </div>
 }

@@ -23,54 +23,28 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand colorLink" href="~/Views/Home/Index">
-                        <img class="logo" src="~/images/BioStudent_Logo.png" /></a>
+                        <img class="logo" src="~/images/BioStudent_Logo.png" />
+                    </a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <!--<li>
-                            <a href="loginPage.aspx">Log-In</a>
-                        </li>
-                        <li>
-                            <div class="line">|</div>
-                        </li>-->
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <!--<li>
-                            <div class="line">|</div>
-                        </li>-->
-                        <li>@Html.ActionLink("Lecture Register", "Login", "Account")</li>
-                        <!--<li>
-                            <div class="line">|</div>
-                        </li>-->
-                        <li>
-                            <a href="LecturerProfile.html">Profile</a>
-                        </li>
-                        <!--<li>
-                            <a href="Profile.aspx">Profile</a>
-                        </li>-->
+                        <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
+                        <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-    <!--<div class="jumbotron backColour">
-        <header class="headerStyle">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="page-heading">
-                        <h1>Home Page</h1>
-                        <p class="small" />
-                        <span class="subheading">Build an image of yourself</span>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>-->
+    @*--------------------------------------
+        Home page content - Joanne
+    *@
     <div class="backColour2">
         <section>
             @*<div id="mySlide"></div>*@
             <img class="img-responsive pictures" src="~/images/HomeImg.png" />
-            <p class="greenText">BioStudent is an attendance system targetted toward lecturers in colleges and unniversities. To cut out the amount of time it takes to call role during class and to provide a convenient way for student attendance to be recorded, we've introduced BioStudent.</p>
+            <p class="greenText">BioStudent is an attendance system targetted toward lecturers in colleges and universities. To cut out the amount of time it takes to call role during class and to provide a convenient way for student attendance to be recorded, we've introduced BioStudent.</p>
         </section>
         <hr />
         <section>
@@ -83,5 +57,6 @@
             <p class="blueText">Students can register and log-in at the bottom of the page</p>
         </section>
     </div>
+    @*--------------------------------------*@
 </body>
 </html>
