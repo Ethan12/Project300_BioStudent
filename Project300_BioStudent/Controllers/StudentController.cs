@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.SqlClient;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -61,7 +62,7 @@ namespace Project300_BioStudent.Controllers
                         ModelState.AddModelError("", "Student Number or Password is incorrect!");
                     }
                 }
-                catch(InvalidOperationException ie)
+                catch (InvalidOperationException ie)
                 {
                     ModelState.AddModelError("", "Student Number or Password is incorrect!");
                 }
@@ -75,9 +76,28 @@ namespace Project300_BioStudent.Controllers
         public ActionResult StudentList()
         {
             return View();
-            var students = new StudentDbContext();
-            return View(students.StudentUserAccounts.ToList());
-            
+
+            //Joanne's attempt at reading in student data to the student listing page:
+            //SqlConnection conn;
+
+            //string connectionString = "Server=tcp:jeef.database.windows.net,1433;Initial Catalog=jeefdb;Persist Security Info=False;User ID=biostudent;Password=fingerprint123**;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            //string sql = "SELECT * FROM StudentUserAccount";
+            //SqlCommand cmd = new SqlCommand(sql, conn);
+
+            //var model = new List<StudentUserAccount>();
+            //using (conn = new SqlConnection(connectionString))
+            //{
+            //    conn.Open();
+            //    SqlDataReader sqlread = cmd.ExecuteReader();
+            //    while (sqlread.Read())
+            //    {
+            //        var studentList = new StudentUserAccount();
+            //        studentList.FullName = sqlread["FullName"].ToString();
+
+            //        model.Add(studentList);
+            //    }
+            //}
+            //return View(model);
         }
 
         public ActionResult LoggedIn()
