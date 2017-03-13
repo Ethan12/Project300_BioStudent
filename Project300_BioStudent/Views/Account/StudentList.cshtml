@@ -59,21 +59,19 @@
                 @Html.AntiForgeryToken()
 
                 <div class="form-horizontal">
-<h2>StudentList</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FullName)
+            @*@Html.DisplayNameFor(model => model.FullName)*@
+            Full Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CourseName)
+            @*@Html.DisplayNameFor(model => model.CourseName)*@
+            Course Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.StudentNum)
+            @*@Html.DisplayNameFor(model => model.StudentNum)*@
+            Student Number
         </th>
         <th></th>
     </tr>
@@ -88,11 +86,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.StudentNum)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
