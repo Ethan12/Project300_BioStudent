@@ -16,6 +16,9 @@ namespace Project300_BioStudent.Models
         [Required(ErrorMessage = "Full Name is Required.")]
         public string FullName { get; set; }
 
+        [Required(ErrorMessage = "Course Name is Required.")]
+        public string CourseName { get; set; }
+
         [Required(ErrorMessage = "Student Number is Required.")]
         [RegularExpression(@"^[a-zA-Z]\d{8}", ErrorMessage = "Incorrect format! Format must be s/S00123456")]
         public string StudentNum { get; set; }

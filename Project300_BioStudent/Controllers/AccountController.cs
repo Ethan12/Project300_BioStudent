@@ -59,6 +59,16 @@ namespace Project300_BioStudent.Controllers
             return View(db.StudentUserAccounts.ToList());
         }
 
+        public ActionResult Attendance()
+        {
+            return View();
+        }
+
+        public ActionResult Grades()
+        {
+            return View();
+        }
+
         //
         // GET: /Account/Login
         [AllowAnonymous]
