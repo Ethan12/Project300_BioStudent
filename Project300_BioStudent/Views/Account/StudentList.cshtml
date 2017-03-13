@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Project300_BioStudent.Models.StudentUserAccount>
+﻿@model IEnumerable<project300_biostudent.models.studentuseraccount>
 
 @{
     ViewBag.Title = "StudentList";
@@ -59,6 +59,12 @@
                 @Html.AntiForgeryToken()
 
                 <div class="form-horizontal">
+<<<<<<< HEAD
+=======
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+>>>>>>> 8459496a01419f054808848d0b8b6a7b0715d66d
 <table class="table">
     <tr>
         <th>
@@ -98,7 +104,6 @@
     </div>
 </body>
 </html>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
