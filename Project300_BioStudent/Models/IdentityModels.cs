@@ -12,6 +12,7 @@ namespace Project300_BioStudent.Models
         public string FullName { get; set; }
         public string TeachingField { get; set; }
         public string Institute { get; set; }
+        public byte[] ProfilePhoto { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
