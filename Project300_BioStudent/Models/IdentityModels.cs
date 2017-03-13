@@ -33,5 +33,6 @@ namespace Project300_BioStudent.Models
             return new ApplicationDbContext();
         }
         public System.Data.Entity.DbSet<Project300_BioStudent.Models.StudentUserAccount> StudentUserAccounts { get; set; }
+        public System.Data.Entity.DbSet<Project300_BioStudent.Models.StudentGrades> StudentGrades { get; set; }
     }
 }

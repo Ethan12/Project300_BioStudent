@@ -68,7 +68,6 @@ c:\users\ellie-mai flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\
 c:\users\ellie-mai flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.pdb
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.InitialCreate.resources
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.csproj.GenerateResource.Cache
-C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.csprojResolveAssemblyReference.cache
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\roslyn\csc.exe
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -431,3 +430,4 @@ C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\o
 C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.pdb
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.dll
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.pdb
+C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources

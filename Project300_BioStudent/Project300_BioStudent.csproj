@@ -182,11 +182,16 @@
     <Compile Include="Migrations\201702221243193_InitialCreate.Designer.cs">
       <DependentUpon>201702221243193_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703132348543_StudentGrades.cs" />
+    <Compile Include="Migrations\201703132348543_StudentGrades.Designer.cs">
+      <DependentUpon>201703132348543_StudentGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\StudentDbContext.cs" />
+    <Compile Include="Models\StudentGrades.cs" />
     <Compile Include="Models\StudentUserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -290,6 +295,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702221243193_InitialCreate.resx">
       <DependentUpon>201702221243193_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703132348543_StudentGrades.resx">
+      <DependentUpon>201703132348543_StudentGrades.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
