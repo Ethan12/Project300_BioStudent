@@ -276,7 +276,6 @@
     <Content Include="Views\Student\Enroll.cshtml">
       <BrowseToURL>~/Student/Enroll</BrowseToURL>
     </Content>
-    <Content Include="Views\Student\StudentList.cshtml" />
     <Content Include="Views\Account\LecturerProfile.cshtml" />
     <Content Include="Views\Account\StudentList.cshtml" />
   </ItemGroup>
