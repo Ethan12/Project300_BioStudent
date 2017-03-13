@@ -30,9 +30,11 @@
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
+                        @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
+                        *@
                         <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
+                        <li>@Html.Partial("_LoginPartial")</li>
                     </ul>
                 </div>
             </div>
@@ -59,7 +61,8 @@
                 @Html.AntiForgeryToken()
 
                 <div class="form-horizontal">
-                    @*<h4>Student Login</h4>*@
+                    @*<h4>Student Login</h4>
+                    *@
                     <hr />
                     <section>This is where the section for the next links will be</section>
 
