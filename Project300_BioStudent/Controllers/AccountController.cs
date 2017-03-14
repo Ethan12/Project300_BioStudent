@@ -175,7 +175,14 @@ namespace Project300_BioStudent.Controllers
         // GET: /Account/EnrollStudent
         public ActionResult EnrollStudent()
         {
-            return View();
+            try
+            {
+                return View(db.StudentUserAccounts.ToList());
+            }catch(ModelValidationException mve)
+            {
+                Debug.WriteLine(mve.Message);
+                return View();
+            }
         }
 
         //
