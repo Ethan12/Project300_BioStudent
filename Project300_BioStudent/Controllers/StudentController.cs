@@ -66,21 +66,15 @@ namespace Project300_BioStudent.Controllers
 
                 var userId = -1;
 
-                using (var client = new HttpClient())
+                string jsonUser = "";
+                using (var client = new WebClient())
                 {
-                    var values = new Dictionary<string, string>
-                    {
-                        {"verify", "1"}
-                    };
-                    var content = new FormUrlEncodedContent(values);
-                    var response = await client.PostAsync(userUrl, content);
-                    var responseString = await response.Content.ReadAsStringAsync();
-
-                    dynamic jsonD = JObject.Parse(responseString);
-
-                    userId = jsonD.result;
-                   
+                    jsonUser = client.DownloadString(userUrl);
                 }
+
+                dynamic jsonDecodedUser = JObject.Parse(jsonUser);
+
+                userId = jsonDecodedUser.result;
 
                 if (userId != -1)
                 {
@@ -116,6 +110,16 @@ namespace Project300_BioStudent.Controllers
         }
 
         public ActionResult StudentRegister()
+        {
+            return View();
+        }
+
+        public ActionResult EnrollSuccess()
+        {
+            return View();
+        }
+
+        public ActionResult EnrollFail()
         {
             return View();
         }

@@ -283,6 +283,8 @@
     <Content Include="Views\Account\LecturerProfile.cshtml" />
     <Content Include="Views\Account\StudentList.cshtml" />
     <Content Include="Views\Account\EnrollStudent.cshtml" />
+    <Content Include="Views\Student\EnrollSuccess.cshtml" />
+    <Content Include="Views\Student\EnrollFail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
