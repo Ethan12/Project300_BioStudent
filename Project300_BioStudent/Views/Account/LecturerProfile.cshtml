@@ -30,19 +30,10 @@
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-<<<<<<< HEAD
-                        @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                        *@
                         <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
                         <li>@Html.Partial("_LoginPartial")</li>
-=======
-                        <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <!-- Log out function to be added here -->
-                        @*<li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                        <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
-                        *@
->>>>>>> 0cd14e45258ac5e8b042cb92a5ba144fd15fb703
+                        @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>*@
+                        <!-- Log out function to be added here -->                       
                     </ul>
                 </div>
             </div>
@@ -63,7 +54,16 @@
         </header>
     </div>
     <div class="jumbotron backColour2">
-        <div>
+        <div class="container">            
+            <ul class="nav nav-tabs">
+                <li>@Html.ActionLink("Students", "StudentList", "Account")</li>
+                @*Dummy links*@
+                <li><a href="AttendancePage.html">Attendance</a></li>
+                <li><a href="GradesPage.html">Grades</a></li>
+
+            </ul>
+        </div>
+<div>
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()

@@ -34,7 +34,8 @@
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
                         @*<li>
                             <a href="LecturerProfile.html">Profile</a>
-                        </li>*@
+                        </li>
+                        *@
                     </ul>
                 </div>
             </div>
@@ -61,48 +62,50 @@
     @Html.AntiForgeryToken()
             <hr />
             <div class="form-group">
-                @*@Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })*@
-                Full Name:
+                @*@Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })*@                
         <div class="col-md-10">
+            Full Name:
             @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @*@Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })*@
-                Teaching Field:
+                @*@Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })*@                
         <div class="col-md-10">
+            Teaching Field:
             @Html.TextBoxFor(m => m.TeachingField, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @*@Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })*@
-                Institute:
+                @*@Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })*@                
         <div class="col-md-10">
+            Institute:
             @Html.TextBoxFor(m => m.Institute, new { @class = "form-control" })
         </div>
             </div>
-            @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @*@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })*@
-        Email:
+            <div class="form-group">
+                @*@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })*@
+       
         <div class="col-md-10">
+            Email Address:
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
-    </div>
+            </div>
             <div class="form-group">
-                @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
-                Password:
+                @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@                
         <div class="col-md-10">
+            Password:
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @*@Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })*@
-                Confirm Password:
+                @*@Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })*@                
         <div class="col-md-10">
+            Confirm Password:
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" }) 
         </div>
             </div>
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" class="btn btn-default" value="Register" />
