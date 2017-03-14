@@ -68,6 +68,9 @@ C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Microsoft
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.csprojResolveAssemblyReference.cache
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.Migrations.InitialCreate.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.Migrations.StudentGrades.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.Migrations.ModulesTable.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.Migrations.StudentAttendance.resources
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.csproj.GenerateResource.Cache
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.dll
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Release\Project300_BioStudent.pdb
