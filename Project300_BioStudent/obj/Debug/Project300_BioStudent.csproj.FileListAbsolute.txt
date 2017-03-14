@@ -431,10 +431,4 @@ C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\o
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.dll
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.pdb
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
-<<<<<<< HEAD
 C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
-=======
-C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.csprojResolveAssemblyReference.cache
-C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ModulesTable.resources
-C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
->>>>>>> 97a3a4d74ebac6a3761f3096bf974bc2a656c269
