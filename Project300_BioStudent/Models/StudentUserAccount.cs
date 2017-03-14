@@ -10,6 +10,7 @@ namespace Project300_BioStudent.Models
     [Table("StudentUserAccount")]
     public class StudentUserAccount
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
 
