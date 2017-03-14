@@ -432,3 +432,8 @@ C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.pdb
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
 C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.dll
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.pdb
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ModulesTable.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
