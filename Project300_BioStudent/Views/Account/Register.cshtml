@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <li>@Html.ActionLink("Lecture Register", "Login", "Account")</li>
+                        <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
                         @*<li>
                             <a href="LecturerProfile.html">Profile</a>
                         </li>*@
@@ -61,38 +61,44 @@
     @Html.AntiForgeryToken()
             <hr />
             <div class="form-group">
-                @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
+                @*@Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })*@
+                Full Name:
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })
+                @*@Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })*@
+                Teaching Field:
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.TeachingField, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })
+                @*@Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })*@
+                Institute:
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Institute, new { @class = "form-control" })
         </div>
             </div>
             @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        @*@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })*@
+        Email:
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
     </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                Password:
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                @*@Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })*@
+                Confirm Password:
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" }) 
         </div>

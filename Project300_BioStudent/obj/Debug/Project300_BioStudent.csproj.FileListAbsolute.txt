@@ -297,7 +297,6 @@ C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\rosly
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\roslyn\vbc.exe
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\roslyn\VBCSCompiler.exe
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Project300_BioStudent.dll.config
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Project300_BioStudent.dll
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Project300_BioStudent.pdb
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Antlr3.Runtime.dll

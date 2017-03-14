@@ -15,6 +15,8 @@ namespace Project300_BioStudent.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        StudentDbContext db = new StudentDbContext();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -50,6 +52,21 @@ namespace Project300_BioStudent.Controllers
             {
                 _userManager = value;
             }
+        }
+
+        public ActionResult StudentList()
+        {
+            return View(db.StudentUserAccounts.ToList());
+        }
+
+        public ActionResult Attendance()
+        {
+            return View();
+        }
+
+        public ActionResult Grades()
+        {
+            return View();
         }
 
         //
