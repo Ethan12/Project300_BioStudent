@@ -199,6 +199,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Modules.cs" />
+    <Compile Include="Models\PhotonDetailsModel.cs" />
     <Compile Include="Models\StudentAttendance.cs" />
     <Compile Include="Models\StudentDbContext.cs" />
     <Compile Include="Models\StudentGrades.cs" />
@@ -293,6 +294,7 @@
     </Content>
     <Content Include="Views\Account\LecturerProfile.cshtml" />
     <Content Include="Views\Account\StudentList.cshtml" />
+    <Content Include="Views\Account\EnrollStudent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

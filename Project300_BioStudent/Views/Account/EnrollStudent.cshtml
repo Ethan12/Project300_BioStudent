@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Enroll";
+}
+
+
+@{ 
+
+            var urlPhoton = "https://api.particle.io/v1/devices?access_token=0ab4defa662936517739b7f732e14a199e30b4ce";
+            string json = "";
+
+    using (var client = new WebClient())
+    {
+        json = client.DownloadString(urlPhoton);
+    }
+
+    var jsonDecoded = Json.Decode(json);
+    Console.Write("JSON CONNECTED: " + jsonDecoded[0].connected);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+    
+    </div>
+</body>
+</html>
