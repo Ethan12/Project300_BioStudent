@@ -69,36 +69,6 @@ namespace Project300_BioStudent.Controllers
             }
             return View();
         }
-        public ActionResult Enroll()
-        {
-            return View();
-        }
-        public ActionResult StudentList()
-        {
-            return View();
-
-            //Joanne's attempt at reading in student data to the student listing page:
-            //SqlConnection conn;
-
-            //string connectionString = "Server=tcp:jeef.database.windows.net,1433;Initial Catalog=jeefdb;Persist Security Info=False;User ID=biostudent;Password=fingerprint123**;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            //string sql = "SELECT * FROM StudentUserAccount";
-            //SqlCommand cmd = new SqlCommand(sql, conn);
-
-            //var model = new List<StudentUserAccount>();
-            //using (conn = new SqlConnection(connectionString))
-            //{
-            //    conn.Open();
-            //    SqlDataReader sqlread = cmd.ExecuteReader();
-            //    while (sqlread.Read())
-            //    {
-            //        var studentList = new StudentUserAccount();
-            //        studentList.FullName = sqlread["FullName"].ToString();
-
-            //        model.Add(studentList);
-            //    }
-            //}
-            //return View(model);
-        }
 
         public ActionResult LoggedIn()
         {

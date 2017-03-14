@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Project300_BioStudent.Models;
+using System.Data.Entity.ModelConfiguration;
+using System.Diagnostics;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -56,8 +58,20 @@ namespace Project300_BioStudent.Controllers
 
         public ActionResult StudentList()
         {
-            return View(db.StudentUserAccounts.ToList());
+            /* try
+             {
+                 return View(db.StudentUserAccounts.ToList());
+             }catch(ModelValidationException mve)
+             {
+                 Debug.WriteLine(mve.Message);
+                 return View(db.StudentUserAccounts.ToList());
+             }*/
+
+            return View();
+
         }
+
+
 
         public ActionResult Attendance()
         {
@@ -155,6 +169,13 @@ namespace Project300_BioStudent.Controllers
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
+        {
+            return View();
+        }
+
+        //
+        // GET: /Account/EnrollStudent
+        public ActionResult EnrollStudent()
         {
             return View();
         }
@@ -470,11 +491,6 @@ namespace Project300_BioStudent.Controllers
         }
 
         public ActionResult LecturerProfile()
-        {
-            return View();
-        }
-
-        public ActionResult LecturersProfile()
         {
             return View();
         }
