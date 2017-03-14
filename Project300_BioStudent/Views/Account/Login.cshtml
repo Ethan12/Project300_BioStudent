@@ -35,7 +35,8 @@
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
                         @*<li>
                             <a href="LecturerProfile.html">Profile</a>
-                        </li>*@
+                        </li>
+                        *@
                     </ul>
                 </div>
             </div>
@@ -63,21 +64,23 @@
                 
                 <hr />
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
+                    @*@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Email Address:
                         @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
                         @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
+                    @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Password:
                         @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
+                    <div class="col-md-offset-2 col-md-12">
                         <div class="checkbox">
                             @Html.CheckBoxFor(m => m.RememberMe)
                             @Html.LabelFor(m => m.RememberMe)
@@ -85,7 +88,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
+                    <div class="col-md-offset-2 col-md-12">
                         <input type="submit" value="Log In" class="btn btn-default" />
                     </div>
                 </div>

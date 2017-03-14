@@ -474,6 +474,11 @@ namespace Project300_BioStudent.Controllers
             return View();
         }
 
+        public ActionResult LecturersProfile()
+        {
+            return View();
+        }
+
         internal class ChallengeResult : HttpUnauthorizedResult
         {
             public ChallengeResult(string provider, string redirectUri)
