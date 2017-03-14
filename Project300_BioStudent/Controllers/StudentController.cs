@@ -49,7 +49,7 @@ namespace Project300_BioStudent.Controllers
 
             if (jsonDecoded.result != 1)
             {
-                string triggerUrl = "https://maker.ifttt.com/trigger/identify_jeef/with/key/o-arvDPNPh5XbneGdmQLWn17n80o919r3WjxjTGWV2-";
+                string triggerUrl = "https://maker.ifttt.com/trigger/enroll_jeef/with/key/o-arvDPNPh5XbneGdmQLWn17n80o919r3WjxjTGWV2-";
                 string userUrl = "https://api.particle.io/v1/devices/1c002b000d47343432313031/userid/?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
                 using (var client = new HttpClient())
                 {
@@ -66,21 +66,15 @@ namespace Project300_BioStudent.Controllers
 
                 var userId = -1;
 
-                using (var client = new HttpClient())
+                string jsonUser = "";
+                using (var client = new WebClient())
                 {
-                    var values = new Dictionary<string, string>
-                    {
-                        {"verify", "1"}
-                    };
-                    var content = new FormUrlEncodedContent(values);
-                    var response = await client.PostAsync(userUrl, content);
-                    var responseString = await response.Content.ReadAsStringAsync();
-
-                    dynamic jsonD = JObject.Parse(responseString);
-
-                    userId = jsonD.result;
-                   
+                    jsonUser = client.DownloadString(userUrl);
                 }
+
+                dynamic jsonDecodedUser = JObject.Parse(jsonUser);
+
+                userId = jsonDecodedUser.result;
 
                 if (userId != -1)
                 {
@@ -116,6 +110,16 @@ namespace Project300_BioStudent.Controllers
         }
 
         public ActionResult StudentRegister()
+        {
+            return View();
+        }
+
+        public ActionResult EnrollSuccess()
+        {
+            return View();
+        }
+
+        public ActionResult EnrollFail()
         {
             return View();
         }
