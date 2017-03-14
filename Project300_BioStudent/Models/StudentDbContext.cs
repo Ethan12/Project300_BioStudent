@@ -17,5 +17,6 @@ namespace Project300_BioStudent.Models
 
         }
         public DbSet<StudentGrades> StudentGrades { get; set; }
+        public DbSet<Modules> Modules { get; set; } 
     }
 }

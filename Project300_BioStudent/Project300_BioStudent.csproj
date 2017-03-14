@@ -186,10 +186,16 @@
     <Compile Include="Migrations\201703132348543_StudentGrades.Designer.cs">
       <DependentUpon>201703132348543_StudentGrades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703140033595_ModulesTable.cs" />
+    <Compile Include="Migrations\201703140033595_ModulesTable.Designer.cs">
+      <DependentUpon>201703140033595_ModulesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Modules.cs" />
+    <Compile Include="Models\StudentAttendance.cs" />
     <Compile Include="Models\StudentDbContext.cs" />
     <Compile Include="Models\StudentGrades.cs" />
     <Compile Include="Models\StudentUserAccount.cs" />
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703132348543_StudentGrades.resx">
       <DependentUpon>201703132348543_StudentGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703140033595_ModulesTable.resx">
+      <DependentUpon>201703140033595_ModulesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
