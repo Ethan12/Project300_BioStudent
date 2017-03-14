@@ -433,3 +433,12 @@ C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\
 C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.dll
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Json.pdb
+<<<<<<< HEAD
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ModulesTable.resources
+C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ModulesTable.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
+=======
+>>>>>>> a91aacade4844b864b9150a10f4bee7450b3c707
