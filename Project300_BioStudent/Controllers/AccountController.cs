@@ -11,6 +11,7 @@ using Microsoft.Owin.Security;
 using Project300_BioStudent.Models;
 using System.Data.Entity.ModelConfiguration;
 using System.Diagnostics;
+using System.IO;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -171,42 +172,53 @@ namespace Project300_BioStudent.Controllers
             return View();
         }
 
-       /* //
-        // GET: /Account/EnrollStudent
-        public ActionResult EnrollStudent()
-        {
-            try
-            {
-                return View(db.StudentUserAccounts.ToList());
-            }catch(ModelValidationException mve)
-            {
-                Debug.WriteLine(mve.Message);
-                return View();
-            }
-        }*/
+        /* //
+         // GET: /Account/EnrollStudent
+         public ActionResult EnrollStudent()
+         {
+             try
+             {
+                 return View(db.StudentUserAccounts.ToList());
+             }catch(ModelValidationException mve)
+             {
+                 Debug.WriteLine(mve.Message);
+                 return View();
+             }
+         }*/
 
         //
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register([Bind(Exclude = "ProfilePhoto")]RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
+                byte[] imageData = null;
+                if (Request.Files.Count > 0)
+                {
+                    HttpPostedFileBase poImgFile = Request.Files["ProfilePhoto"];
+
+                    using (var binary = new BinaryReader(poImgFile.InputStream))
+                    {
+                        imageData = binary.ReadBytes(poImgFile.ContentLength);
+                    }
+                }
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FullName = model.FullName, TeachingField = model.TeachingField, Institute = model.Institute };
+                user.ProfilePhoto = imageData;
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("About", "Home");
                 }
                 AddErrors(result);
             }
