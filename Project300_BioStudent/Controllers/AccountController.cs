@@ -488,11 +488,6 @@ namespace Project300_BioStudent.Controllers
             return View();
         }
 
-        public ActionResult EnrollStudent()
-        {
-            return View();
-        }
-
         internal class ChallengeResult : HttpUnauthorizedResult
         {
             public ChallengeResult(string provider, string redirectUri)
