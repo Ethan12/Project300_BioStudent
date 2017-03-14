@@ -182,6 +182,18 @@
     <Compile Include="Migrations\201702221243193_InitialCreate.Designer.cs">
       <DependentUpon>201702221243193_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703142105078_StudentGrades.cs" />
+    <Compile Include="Migrations\201703142105078_StudentGrades.Designer.cs">
+      <DependentUpon>201703142105078_StudentGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703142108166_Modules.cs" />
+    <Compile Include="Migrations\201703142108166_Modules.Designer.cs">
+      <DependentUpon>201703142108166_Modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703142110416_StudentAttendance.cs" />
+    <Compile Include="Migrations\201703142110416_StudentAttendance.Designer.cs">
+      <DependentUpon>201703142110416_StudentAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -297,6 +309,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702221243193_InitialCreate.resx">
       <DependentUpon>201702221243193_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142105078_StudentGrades.resx">
+      <DependentUpon>201703142105078_StudentGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142108166_Modules.resx">
+      <DependentUpon>201703142108166_Modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142110416_StudentAttendance.resx">
+      <DependentUpon>201703142110416_StudentAttendance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
