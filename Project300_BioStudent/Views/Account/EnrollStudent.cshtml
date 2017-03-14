@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Project300_BioStudent.Models.StudentUserAccount>
+@{
     ViewBag.Title = "Enroll";
 }
 
@@ -25,8 +26,22 @@
     <title></title>
 </head>
 <body>
-    <div>
-    
-    </div>
+    <h1>Enroll a Student</h1>
+   @if (jsonDecoded[0].connected)
+   {
+       <div>
+           <select>
+               @foreach(var item in Model)
+               {
+                   <option value="@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.FullName)</option>
+               }
+           </select>
+       </div>
+   }else
+   {
+       <div>
+           <h3>The device is not connected, please try again later.</h3>
+       </div>
+   }
 </body>
 </html>
