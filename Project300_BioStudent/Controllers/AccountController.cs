@@ -58,17 +58,14 @@ namespace Project300_BioStudent.Controllers
 
         public ActionResult StudentList()
         {
-            /* try
+             try
              {
                  return View(db.StudentUserAccounts.ToList());
              }catch(ModelValidationException mve)
              {
                  Debug.WriteLine(mve.Message);
-                 return View(db.StudentUserAccounts.ToList());
-             }*/
-
-            return View();
-
+                 return View();
+             }
         }
 
 
