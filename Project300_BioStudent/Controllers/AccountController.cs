@@ -174,6 +174,13 @@ namespace Project300_BioStudent.Controllers
         }
 
         //
+        // GET: /Account/EnrollStudent
+        public ActionResult EnrollStudent()
+        {
+            return View();
+        }
+
+        //
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
