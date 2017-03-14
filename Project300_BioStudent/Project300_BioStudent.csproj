@@ -297,6 +297,7 @@
     <Content Include="Views\Account\EnrollStudent.cshtml" />
     <Content Include="Views\Student\EnrollSuccess.cshtml" />
     <Content Include="Views\Student\EnrollFail.cshtml" />
+    <Content Include="Views\Account\TestStudentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

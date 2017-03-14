@@ -70,7 +70,20 @@ namespace Project300_BioStudent.Controllers
 
         }
 
+        public ActionResult TestStudentList()
+        {
+            //try
+            //{
+            //    return View(db.StudentUserAccounts.ToList());
+            //}
+            //catch (ModelValidationException mve)
+            //{
+            //    Debug.WriteLine(mve.Message);
+            //    return View();
+            //}
+            return View(db.StudentUserAccounts.ToList());
 
+        }
 
         public ActionResult Attendance()
         {
