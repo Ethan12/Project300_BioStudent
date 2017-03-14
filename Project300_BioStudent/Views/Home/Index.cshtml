@@ -22,16 +22,33 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand colorLink" onclick="~/Views/Home/Index">
+                    @*<a class="navbar-brand colorLink" onclick="~/Views/Home/Index">
                         <img class="logo" src="~/images/BioStudent_Logo.png" />
-                    </a>
+                    </a>*@
                     @*<a>@Html.ActionLink("BioStudent", "Index", "Home", null, new { @class="logoLink" })</a>*@
                     @*<a href='@Url.Action("Index", "HomeController")'>
                         <img src='@Url.Content("~/images/BioStudent_Logo.png")' />
                     </a>*@
+
+                    @*<div id="myLogo">
+                        <div class="logoPlace">
+                            <nav>
+                                <a href="/">
+                                    <img src="../images/BioStudent_Logo.png" height="30" width="156" /></a>
+                            </nav>
+                        </div>
+                    </div>
+                    *@
+
                 </div>
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    @*<a class="navbar-brand colorLink" onclick="~/Views/Home/Index">
+                        <img class="logo" src="~/images/BioStudent_Logo.png" />
+                    </a>*@
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
+                    </a>
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>

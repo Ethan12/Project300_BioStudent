@@ -23,17 +23,21 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
-                    <a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
+                    @*<a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
                         <img class="logo" src="~/images/BioStudent_Logo.png" />
-                    </a>
+                    </a>*@
                 </div>
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
+                    </a>
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
                         <li>@Html.Partial("_LoginPartial")</li>
-                        @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>*@
-                        <!-- Log out function to be added here -->                       
+                        @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
+                        *@
+                        <!-- Log out function to be added here -->
                     </ul>
                 </div>
             </div>
@@ -54,7 +58,7 @@
         </header>
     </div>
     <div class="jumbotron backColour2">
-        <div class="container">            
+        <div class="container">
             <ul class="nav nav-tabs">
                 <li>@Html.ActionLink("Students", "StudentList", "Account")</li>
                 @*Dummy links*@
@@ -64,7 +68,7 @@
 
             </ul>
         </div>
-<div>
+        <div>
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()

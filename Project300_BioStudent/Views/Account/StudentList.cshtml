@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Project300_BioStudent.Models.StudentUserAccount>
+﻿@model IEnumerable<project300_biostudent.models.studentuseraccount>
     @{
         ViewBag.Title = "StudentList";
     }
@@ -29,6 +29,9 @@
                     </div>
                     <!-- Lecturer Login and Reistration Links -->
                     <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
+                    </a>
                         <ul class="nav navbar-nav navbar-right">
                             <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
                             <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
@@ -54,7 +57,7 @@
         <div class="jumbotron backColour2">
             <div>
                 @using (Html.BeginForm())
-            {
+                {
                     @Html.AntiForgeryToken()
 
                     <div class="form-horizontal">
