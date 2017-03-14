@@ -171,7 +171,7 @@ namespace Project300_BioStudent.Controllers
             return View();
         }
 
-        //
+       /* //
         // GET: /Account/EnrollStudent
         public ActionResult EnrollStudent()
         {
@@ -183,7 +183,7 @@ namespace Project300_BioStudent.Controllers
                 Debug.WriteLine(mve.Message);
                 return View();
             }
-        }
+        }*/
 
         //
         // POST: /Account/Register
