@@ -10,10 +10,12 @@ namespace Project300_BioStudent.Models
     {
         public string CourseName { get; set; }
         public DbSet<StudentUserAccount> StudentUserAccounts { get; set; }
+        
 
         public StudentDbContext() :base("DefaultConnection")
         {
 
         }
+        public DbSet<StudentGrades> StudentGrades { get; set; }
     }
 }
