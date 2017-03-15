@@ -23,7 +23,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
-                    
+
                 </div>
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
@@ -33,7 +33,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -63,6 +63,7 @@
                     <div class="col-md-12">
                         Full Name:
                         @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
                     </div>
             </div>
             <div class="form-group">
@@ -70,6 +71,7 @@
                     <div class="col-md-12">
                         Teaching Field:
                         @Html.TextBoxFor(m => m.TeachingField, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.TeachingField, "", new { @class = "text-danger" })
                     </div>
             </div>
             <div class="form-group">
@@ -77,6 +79,7 @@
                     <div class="col-md-12">
                         Institute:
                         @Html.TextBoxFor(m => m.Institute, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Institute, "", new { @class = "text-danger" })
                     </div>
             </div>
             <div class="form-group">
@@ -85,6 +88,7 @@
                     <div class="col-md-12">
                         Email Address:
                         @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                     </div>
             </div>
             <div class="form-group">
@@ -92,6 +96,7 @@
                     <div class="col-md-12">
                         Password:
                         @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                     </div>
             </div>
             <div class="form-group">
@@ -99,6 +104,7 @@
                     <div class="col-md-12">
                         Confirm Password:
                         @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
                     </div>
             </div>
             <div class="form-group">
@@ -108,7 +114,7 @@
                         <input type="file" name="ProfilePhoto" id="uploadImage" accept=".png,.jpg,.jpeg,.gif,.tif" />
                     </div>
             </div>
-            @Html.ValidationSummary("", new { @class = "text-danger" })
+            @*@Html.ValidationSummary("", new { @class = "text-danger" })*@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-12">
