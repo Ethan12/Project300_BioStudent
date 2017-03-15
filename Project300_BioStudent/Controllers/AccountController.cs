@@ -19,6 +19,7 @@ namespace Project300_BioStudent.Controllers
     public class AccountController : Controller
     {
         StudentDbContext db = new StudentDbContext();
+        ModuleDbContext mdb = new ModuleDbContext();
 
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
@@ -68,6 +69,18 @@ namespace Project300_BioStudent.Controllers
                  return View();
              }
 
+        }
+
+        public ActionResult CreateModule()
+        {
+            try
+            {
+                return View(mdb.Modules.ToList());
+            }catch(ModelValidationException mve)
+            {
+                Debug.WriteLine(mve.Message);
+                return View();
+            }
         }
 
         public ActionResult TestStudentList()
