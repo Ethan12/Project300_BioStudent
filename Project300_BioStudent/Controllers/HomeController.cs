@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using Project300_BioStudent.DAL;
 using Project300_BioStudent.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,6 +14,11 @@ namespace Project300_BioStudent.Controllers
 {
     public class HomeController : Controller
     {
+        private ILecturerRepo lectrepo;
+        public HomeController()
+        {
+            lectrepo = new LecturerRepo(new ApplicationDbContext());
+        }
         public ActionResult Index()
         {
             return View();
@@ -19,9 +26,19 @@ namespace Project300_BioStudent.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            string userId = User.Identity.GetUserId();
+            if (userId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ApplicationUser Lecturer = lectrepo.GetItemByid((string)userId);
 
-            return View();
+            if (Lecturer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(Lecturer);
+
         }
 
         public ActionResult Contact()
