@@ -9,6 +9,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Project300_BioStudent.Models;
+using System.Data.Entity.ModelConfiguration;
+using System.Diagnostics;
+using System.IO;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -205,8 +208,8 @@ namespace Project300_BioStudent.Controllers
              }catch(ModelValidationException mve)
              {
                  Debug.WriteLine(mve.Message);
-            return View();
-        }
+                 return View();
+             }
          }*/
 
         //
@@ -214,17 +217,27 @@ namespace Project300_BioStudent.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register([Bind(Exclude = "ProfilePhoto")]RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
+                byte[] imageData = null;
+                if (Request.Files.Count > 0)
+                {
+                    HttpPostedFileBase poImgFile = Request.Files["ProfilePhoto"];
+
+                    using (var binary = new BinaryReader(poImgFile.InputStream))
+                    {
+                        imageData = binary.ReadBytes(poImgFile.ContentLength);
+                    }
+                }
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FullName = model.FullName, TeachingField = model.TeachingField, Institute = model.Institute };
                 user.ProfilePhoto = imageData;
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-                    
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
@@ -490,6 +503,7 @@ namespace Project300_BioStudent.Controllers
 
             base.Dispose(disposing);
         }
+
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
