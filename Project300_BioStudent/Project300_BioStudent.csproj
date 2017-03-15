@@ -204,7 +204,6 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModuleDbContext.cs" />
     <Compile Include="Models\Modules.cs" />
-    <Compile Include="Models\PhotonDetailsModel.cs" />
     <Compile Include="Models\StudentAttendance.cs" />
     <Compile Include="Models\StudentDbContext.cs" />
     <Compile Include="Models\StudentEnrolment.cs" />
