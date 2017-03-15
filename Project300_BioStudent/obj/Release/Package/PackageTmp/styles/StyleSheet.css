@@ -1,0 +1,764 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*COLOURS
+    PINK: #ff4d88
+    GREEN: #66cd00
+    BLUE: #0085a1
+    TURQUOISE: #009973
+    GREY: #a3c2c2
+    
+    */
+
+#main {
+    min-height: 300px;
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    /*background-image: url("~\images\backgroundBlueDark.jpg");*/
+    background-color: #ADD8E6;
+}
+
+body img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*width:100%;
+    object-fit: cover;*/
+    width: 100%;
+    /*background: url(../images/scanBackground.jpg) no-repeat center center fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2 {
+    /*font-size: 14px;*/
+    text-align: center;
+    font-weight: bold;
+}
+
+.greenText {
+    color:grey;
+}
+
+.blueText {
+    color:#0085a1;
+}
+
+.pinkText {
+    color: #ff4d88;
+}
+
+.green:hover {
+    color: #66CD00;
+}
+
+.blue:hover {
+    color: #0085a1;
+}
+
+.pink:hover {
+    color: #ff4d88;
+}
+
+/*jumbotron {
+    /*background-image: url("~\images\backgroundBlueDark.jpg");
+    background-color: blue;
+}*/
+
+/*section, jumbotron {
+    /*background-color: pink;*/
+    /*width: 100%;
+    padding: 20px;
+    opacity: 0.7;
+    /*margin-top:20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: red;
+}*/
+
+hr {
+    color: #66CD00;
+    /*padding:80px;*/
+    /*margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 0px;*/
+    width: 300px;
+    height: 5px;
+}
+
+.backColour {
+    background-color: #ADD8E6;
+    /*background: transparent;*/
+    opacity: 0.7;
+    /*background-image:url("backgroundBlueDark.jpg");*/
+    margin: 20px;
+    margin-top: 120px;
+}
+
+.backColour2 {
+    /*background-color: #eee;*/
+    background: transparent;
+    opacity: 0.9;
+    /*background-image:url("backgroundBlueDark.jpg");*/
+    margin: 20px;
+    margin-top: 50px;
+}
+
+body {
+    /*background: #00cca3;*/
+    /*----- THIS IS THE BACKGROUND COLOUR!! -----*/
+    /*background: black;*/
+    /*background-image: url("WoodBackground");*/
+    /*background-image: linear-gradient(#a3c2c2, #80ffdf, black); #80ffdf, #80ff80, black*/
+    /*background-image: linear-gradient(black, #80ffdf, #a3c2c2);*/
+    /*background-image: url("~\images\backgroundBlueDark.jpg");
+    /*padding : 2em;
+  	margin  : 0;
+  	background-image : url("bookimg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+  	opacity: 0.7;
+    background: green;*/
+    font-family: 'Verdana Pro';
+    margin-left: 120px;
+    margin-right: 120px;
+    color:grey;
+}
+
+.style {
+    /*background-image: url("backgroundprint.jpg");*/
+}
+
+/*This is for the overlay above the background image*/
+#div {
+    /*font-size: 30px;
+	position: relative;
+  	width  : 740px;
+  	height : 800px;
+  	margin : 0 auto;
+  	background: white;
+    text-align:left;
+  	position: relative;
+  	width  : 840px;
+  	height : 800px;
+  	margin : 0 auto;
+  	background: #e6fff7;*/
+}
+
+.iconsStyle {
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+header {
+    background: blue;
+    margin-top: 30px; /*was 55px*/
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    /*border: 4px solid #66CD00;*/
+    /*border-radius: 7pt;
+    height: 400px;*/
+}
+
+.layout {
+    margin-top: 20px;
+}
+
+#main > article {
+    margin: 4px;
+    padding: 5px;
+    background: #dddd88;
+    -webkit-flex: 3 1 60%;
+    flex: 3 1 60%;
+    -webkit-order: 2;
+    order: 2;
+    height: 100px;
+}
+
+#main > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    /*border-radius: 7pt;*/
+    background: #ccccff;
+    -webkit-flex: 1 6 20%;
+    flex: 1 6 20%;
+    -webkit-order: 3;
+    order: 3;
+    height: 100px;
+}
+
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    /*border-radius: 7pt;*/
+    background: #ccccff;
+    -webkit-flex: 1 6 20%;
+    flex: 1 6 20%;
+    -webkit-order: 1;
+    order: 1;
+}
+
+.nav navbar-nav {
+    font-size: 14px;
+}
+
+/*navbar {
+    font-size: 14px;
+}*/
+
+.container {
+    /*background:#ccccff;*/
+    /*opacity: 0.3;
+    background: #a3c2c2;
+    width: 100%;
+    font-size: 14px;*/
+    /*background: pink;
+    background-image: url("E:\BioStudentV2\BioStudentV2\images\BannerBio.jpg");
+    /*width:1200px;*/
+    /*margin-left:50px;
+    margin-right:50px;*/
+}
+
+/*footer {
+    /*width:103em;
+	height:10em;*/
+/*background: lightyellow;
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #ffff4d;
+    /*border-radius: 7pt;
+    height:100px;
+}*/
+
+footer {
+    padding: 30px 0 55px;
+    color: #66CD00;
+    margin-top: 100px;
+}
+
+p {
+    /*color: #66CD00;*/
+    color:grey;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size:20px;
+    text-align:center;
+    background-color:transparent;
+    margin-top:20px;
+}
+
+.line {
+    margin-top: 45px;
+    font-weight: bold;
+    color: #66CD00;
+}
+
+.logoLinks {
+    background-color: white;
+    margin-top: 5px;
+}
+
+.colorLinks {
+    font-weight: bold;
+    background-color: transparent;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+a:focus, a:hover {
+    color: #66CD00;
+}
+
+.legal {
+    float: right;
+    text-align: right;
+    color: #66CD00;
+}
+
+.LogReg {
+    /*float: right;*/
+    text-align: center;
+    color: #66CD00;
+}
+
+footer .list-inline {
+    margin: 0;
+    padding: 0;
+}
+
+.copyright {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0;
+    color: #ff4d88;
+}
+
+form {
+    margin-top: 50px;
+}
+
+header img {
+    object-fit: cover;
+    width: 100%;
+    height: 80px;
+    /*border:1px solid lightyellow;*/
+    /*border-radius: 7pt;*/
+    object-position: center;
+    /*width:1600px;
+	height:150px;*/
+    background-color: blue;
+}
+
+article img {
+    object-fit: cover;
+    width: 100%;
+    border: 1px solid #669900;
+    /*border-radius: 7pt;
+    /*object-fit:fill;*/
+    /*height:768px;*/
+}
+
+/*section img {
+    /*width: 140px;
+    height: 280px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}*/
+
+.square {
+    height: 280px;
+    width: 220px;
+    margin: 25px;
+    text-align: center;
+}
+
+
+@media all and (max-width:640px) {
+    #main, #page {
+        -webkit-flex-flow: column;
+        flex-flow: column;
+        flex-direction: column;
+    }
+}
+
+/*Navigation*/
+
+.nav navbar-nav {
+    display: inline-block;
+    margin-left: 200px;
+    color: red;
+    width: 500px;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    article img {
+        object-fit: cover;
+        width: 100%;
+        border: 1px solid #669900;
+        /*border-radius: 7pt;*/
+        content: url("TulipsPhone.jpg");
+    }
+
+    header img {
+        object-fit: cover;
+        width: 100%;
+        border: 1px solid lightyellow;
+        /*border-radius: 7pt;*/
+    }
+
+    nav p {
+        text-align: center;
+    }
+
+    navbar-right {
+        color: pink;
+    }
+
+    .navbar-custom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        font-family: 'Verdana Pro';
+        font-size: 14px;
+    }
+
+    /*Bold on breakpoint*/
+
+    /*.navbar-custom .navbar-brand {
+            font-weight: 800;
+        }
+
+        .navbar-custom .nav li a {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }*/
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-custom {
+        background: transparent;
+        border-bottom: 1px solid transparent;
+    }
+
+        /*BioStudent link top right corner*/
+
+        .navbar-custom .navbar-brand {
+            color: #0085a1;
+            padding: 20px;
+        }
+
+            .navbar-custom .navbar-brand:hover,
+            .navbar-custom .navbar-brand:focus {
+                color: #66CD00;
+            }
+
+        /*Login/registration links top left corner*/
+
+        .navbar-custom .nav li a {
+            color: #0085a1;
+            padding: 45px;
+        }
+
+
+            .navbar-custom .nav li a:hover,
+            .navbar-custom .nav li a:focus {
+                color: #66CD00;
+            }
+}
+
+/*blue - #0085a1*/
+/*green - #66CD00*/
+
+@media only screen and (min-width: 1170px) {
+    .navbar-custom {
+        -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+        .navbar-custom.is-fixed {
+            position: fixed;
+            top: -61px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #f2f2f2;
+            -webkit-transition: -webkit-transform 0.3s;
+            -moz-transition: -moz-transform 0.3s;
+            transition: transform 0.3s;
+        }
+
+            .navbar-custom.is-fixed .navbar-brand {
+                color: #404040;
+            }
+
+                .navbar-custom.is-fixed .navbar-brand:hover,
+                .navbar-custom.is-fixed .navbar-brand:focus {
+                    color: #0085a1;
+                }
+
+            .navbar-custom.is-fixed .nav li a {
+                color: #404040;
+            }
+
+                .navbar-custom.is-fixed .nav li a:hover,
+                .navbar-custom.is-fixed .nav li a:focus {
+                    color: #0085a1;
+                }
+
+        .navbar-custom.is-visible {
+            /* if the user changes the scrolling direction, we show the header */
+            -webkit-transform: translate3d(0, 100%, 0);
+            -moz-transform: translate3d(0, 100%, 0);
+            -ms-transform: translate3d(0, 100%, 0);
+            -o-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+}
+
+/* Header Style */
+
+.headerStyle {
+    /*background-color: #808080;*/
+    background-color: black;
+    background: no-repeat center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 50px;
+}
+
+    .headerStyle .site-heading,
+    .headerStyle .post-heading,
+    .headerStyle .page-heading {
+        padding: 60px 0 10px;
+        /*border: 4px solid #66CD00;*/
+        color: white;
+        /*color: #66CD00;*/
+        /*background-image: url("~\images\backgroundBlueDark.jpg");*/
+    }
+
+@media only screen and (min-width: 768px) {
+    .headerStyle .site-heading,
+    .headerStyle .post-heading,
+    .headerStyle .page-heading {
+        padding: 40px 0;
+    }
+}
+
+.headerStyle .site-heading,
+.headerStyle .page-heading {
+    text-align: center;
+}
+
+    .headerStyle .site-heading h1,
+    .headerStyle .page-heading h1 {
+        margin-top: 0;
+        font-size: 50px;
+    }
+
+    .headerStyle .site-heading .subheading,
+    .headerStyle .page-heading .subheading {
+        font-size: 24px;
+        line-height: 1.1;
+        display: block;
+        font-family: 'Buxton Sketch';
+        font-weight: 300;
+        margin: 10px 0 0;
+    }
+
+@media only screen and (min-width: 768px) {
+    .headerStyle .site-heading h1,
+    .headerStyle .page-heading h1 {
+        font-size: 80px;
+    }
+}
+
+.intro-header .post-heading h1 {
+    font-size: 35px;
+}
+
+.intro-header .post-heading .subheading,
+.intro-header .post-heading .meta {
+    line-height: 1.1;
+    display: block;
+}
+
+.intro-header .post-heading .subheading {
+    font-family: 'Buxton Sketch';
+    font-size: 24px;
+    margin: 10px 0 30px;
+    font-weight: 600;
+}
+
+.intro-header .post-heading .meta {
+    font-family: 'Buxton Sketch';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+    .intro-header .post-heading .meta a {
+        color: white;
+        /*color: #66CD00;*/
+    }
+
+.small {
+    color: #ff4d88;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-header .post-heading h1 {
+        font-size: 55px;
+    }
+
+    .intro-header .post-heading .subheading {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 170px) {
+
+    /*section img {
+        height: 280px;
+        width: 100%;
+        /*height: 100%;
+        margin: 15px;
+        text-align: center;
+        display: inline;
+    }*/
+
+    h1 {
+        font-size: 15px;
+    }
+}
+
+/*Map Styling*/
+
+.controls {
+    z-index: 0;
+    position: absolute;
+    left: 117px;
+    top: 0px;
+    margin-top: 18px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.firstHeading {
+    color: black;
+}
+
+h1 {
+    color: black;
+}
+
+
+/*Here's why Stylesheet 2 started*/
+body {
+    background: white;
+}
+
+img {
+    
+}
+
+body, html {
+    height: 100%;
+}
+
+/*.bgimg {
+    /*background: linear-gradient(blue, green);
+    /*background-image: url('/images/Part.jpg');*/
+/*background:#f0f8ff;
+    background-color: #ffffff;
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    opacity: 0.7;
+    align-content: center;
+}*/
+
+/*Style for the logo*/
+.logo {
+    margin-top: 10px;
+    width: 400px;
+    height: 80px;
+}
+/*fieldset {
+    width: 920px;
+    margin:auto;
+    background-color:#e9e2e2;
+    text-align:center;
+}
+
+legend{
+    /*font-size: 40px;
+    color: purple;
+}*/
+
+/*.navbar {
+    float: right;
+}*/
+
+h2 {
+    color: blue;
+}
+
+/*Module Table*/
+
+.tableStyle {
+    text-align: center;
+    margin-top: 5px;
+}
+
+    .tableStyle td {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+.bottom {
+    float: right;
+}
+
+/*Page Bottom*/
+
+.copyright {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0;
+    color: #ff4d88;
+}
+
+.studentLinks {
+    font-size: 15px;
+    text-align: right;
+    margin-bottom: 0;
+    color: #ff4d88;
+}
+
+/*Home Page Images*/
+
+.pictures {
+    object-fit:fill;
+    max-width:100%;
+}
+
+.img-responsive {
+    height: 500px;
+    margin-top:120px;
+}
+
+/*Submit Button*/
+
+.colour {
+    color:#ADD8E6;
+}
+
+/*Form Content*/
+
+/*.form-horizontal {
+    text-align:center;
+}*/
+
+/*Link to Home Page*/
+
+.logoLink
+{
+    background: url(..\images\BioStudent_Logo.png) no-repeat top left;
+     display: block;
+     width: 150px;
+     height: 150px;
+     text-indent: -9999px; /* hides the link text */
+}

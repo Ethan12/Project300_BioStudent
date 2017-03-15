@@ -23,18 +23,21 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
-                    <a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
+                    @*<a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
                         <img class="logo" src="~/images/BioStudent_Logo.png" />
-                    </a>
+                    </a>*@
                 </div>
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
+                    </a>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <!-- Log out function to be added here -->
-                        @*<li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
                         <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
+                        <li>@Html.Partial("_LoginPartial")</li>
+                        @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
                         *@
+                        <!-- Log out function to be added here -->
                     </ul>
                 </div>
             </div>
@@ -55,6 +58,16 @@
         </header>
     </div>
     <div class="jumbotron backColour2">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li>@Html.ActionLink("Students", "StudentList", "Account")</li>
+                @*Dummy links*@
+                <li><a href="AttendancePage.html">Attendance</a></li>
+                <li><a href="GradesPage.html">Grades</a></li>
+                <li>@Html.ActionLink("Enroll a Student", "EnrollStudent", "Account")</li>
+
+            </ul>
+        </div>
         <div>
             @using (Html.BeginForm())
             {
@@ -63,8 +76,10 @@
                 <div class="form-horizontal">
                     @*<h4>Student Login</h4>
                     *@
-                    <hr />
+                    <hr />                    
                     <section>This is where the section for the next links will be</section>
+                    
+                    @*@Html.Partial("~/Views/Account/TestStudentList.cshtml");*@
 
                 </div>
             }

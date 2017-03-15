@@ -42,11 +42,11 @@ h2 {
 }
 
 .greenText {
-    color:grey;
+    color: grey;
 }
 
 .blueText {
-    color:#0085a1;
+    color: #0085a1;
 }
 
 .pinkText {
@@ -72,7 +72,7 @@ h2 {
 
 /*section, jumbotron {
     /*background-color: pink;*/
-    /*width: 100%;
+/*width: 100%;
     padding: 20px;
     opacity: 0.7;
     /*margin-top:20px;
@@ -97,7 +97,7 @@ hr {
     opacity: 0.7;
     /*background-image:url("backgroundBlueDark.jpg");*/
     margin: 20px;
-    margin-top: 200px;
+    margin-top: 120px;
 }
 
 .backColour2 {
@@ -127,7 +127,7 @@ body {
     font-family: 'Verdana Pro';
     margin-left: 120px;
     margin-right: 120px;
-    color:grey;
+    color: grey;
 }
 
 .style {
@@ -250,13 +250,13 @@ footer {
 
 p {
     /*color: #66CD00;*/
-    color:grey;
+    color: grey;
     margin-left: 50px;
     margin-right: 50px;
-    font-size:20px;
-    text-align:center;
-    background-color:transparent;
-    margin-top:20px;
+    font-size: 20px;
+    text-align: center;
+    background-color: transparent;
+    margin-top: 20px;
 }
 
 .line {
@@ -650,7 +650,6 @@ body {
 }
 
 img {
-    
 }
 
 body, html {
@@ -731,23 +730,47 @@ h2 {
 /*Home Page Images*/
 
 .pictures {
-    object-fit:fill;
-    max-width:100%;
+    object-fit: fill;
+    max-width: 100%;
 }
 
 .img-responsive {
     height: 500px;
-    margin-top:120px;
+    margin-top: 120px;
 }
 
 /*Submit Button*/
 
 .colour {
-    color:#ADD8E6;
+    color: #ADD8E6;
 }
 
 /*Form Content*/
 
-.form-horizontal {
+/*.form-horizontal {
     text-align:center;
+}*/
+
+/*Link to Home Page*/
+
+#myLogo {
+    width: 100%;
+    height: 30px;
+    z-index: 999;
+    background-color: #252e30;
+}
+
+.logoPlace {
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+.logoLink {
+    display: inline-block;
+    width: 156px;
+    height: 30px;
+    margin-top: 5px;
+    background-size: auto 43px;
+    background-image: url(../images/mylogo.png);
+    background-repeat: no-repeat;
 }

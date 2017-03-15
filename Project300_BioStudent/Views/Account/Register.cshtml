@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = "Register";
 }
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,17 +23,17 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
-                    <a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
-                        <img class="logo" src="~/images/BioStudent_Logo.png" /></a>
+                    
                 </div>
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
+                    </a>
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                        @*<li>
-                            <a href="LecturerProfile.html">Profile</a>
-                        </li>*@
+                        
                     </ul>
                 </div>
             </div>
@@ -42,7 +41,6 @@
     </div>
     <div class="jumbotron backColour">
         <header class="headerStyle">
-            <!--<div class="container">-->
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
@@ -57,52 +55,61 @@
     <div class="jumbotron backColour2">
         <div>
             @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
-            {
+{
     @Html.AntiForgeryToken()
             <hr />
             <div class="form-group">
-                @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
+                @*@Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Full Name:
             @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
+                @*@Html.LabelFor(m => m.TeachingField, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Teaching Field:
             @Html.TextBoxFor(m => m.TeachingField, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
+                @*@Html.LabelFor(m => m.Institute, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Institute:
             @Html.TextBoxFor(m => m.Institute, new { @class = "form-control" })
         </div>
             </div>
-            @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
+                @*@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })*@
+
+                    <div class="col-md-12">
+                        Email Address:
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
     </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
+                @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Password:
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
         </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
+                @*@Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Confirm Password:
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" }) 
         </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.ProfilePhoto, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    <input type="file" name="ProfilePhoto" id="fileUpload" accept=".png,.jpg,.jpeg,.gif,.tif" />
-                </div>
+                @*@Html.LabelFor(m => m.ProfilePhoto, new { @class = "col-md-2 control-label" })*@
+                    <div class="col-md-12">
+                        Profile Photo:
+                        <input type="file" name="ProfilePhoto" id="uploadImage" accept=".png,.jpg,.jpeg,.gif,.tif" />
+                    </div>
             </div>
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" class="btn btn-default" value="Register" />
@@ -113,7 +120,6 @@
     </div>
 </body>
 </html>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

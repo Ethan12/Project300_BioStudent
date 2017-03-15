@@ -87,9 +87,6 @@ namespace Project300_BioStudent.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-
-        [Display(Name ="ProfilePhoto")]
-        public byte[] ProfilePhoto { get; set; }
     }
 
     public class ResetPasswordViewModel

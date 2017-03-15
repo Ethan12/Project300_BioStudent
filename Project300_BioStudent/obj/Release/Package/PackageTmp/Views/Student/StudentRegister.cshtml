@@ -1,0 +1,143 @@
+﻿@model Project300_BioStudent.Models.StudentUserAccount
+
+@{
+    ViewBag.Title = "StudentRegister";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title.</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/styles/StyleSheet.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
+                    <a class="navbar-brand colorLink" href="~/Views/Home/Index.cshtml">
+                        <img class="logo" src="~/images/BioStudent_Logo.png" /></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
+                        <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
+                        @*<li>
+                            <a href="LecturerProfile.html">Profile</a>
+                        </li>
+                        *@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="jumbotron backColour">
+        <header class="headerStyle">
+            <!--<div class="container">-->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Student Registration</h1>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="jumbotron backColour2">
+        <div>
+            @using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @*<h4>Student Registration</h4>*@
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @if (ViewBag.Message != null)
+        {
+            <div class="form-group">
+                <div class="col-md-12">@ViewBag.Message</div>
+            </div>
+        }
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-12">
+                Full Name:
+                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.CourseName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-12">
+                Course of Study:
+                @Html.EditorFor(model => model.CourseName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CourseName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.StudentNum, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-12">
+                Student Number:
+                @Html.EditorFor(model => model.StudentNum, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StudentNum, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.StudentEmail, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-12">
+                Student Email Address:
+                @Html.EditorFor(model => model.StudentEmail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StudentEmail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-12">
+                Password:
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-12">
+                Confirm Password:
+                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-12">
+                <input type="hidden" id="FingerprintID" name="FingerprintID" value="-1" />
+                <input type="submit" value="Register" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
