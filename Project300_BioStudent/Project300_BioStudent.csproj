@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201703142110416_StudentAttendance.Designer.cs">
       <DependentUpon>201703142110416_StudentAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703150051288_StudentEnrolment.cs" />
+    <Compile Include="Migrations\201703150051288_StudentEnrolment.Designer.cs">
+      <DependentUpon>201703150051288_StudentEnrolment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -202,6 +206,7 @@
     <Compile Include="Models\PhotonDetailsModel.cs" />
     <Compile Include="Models\StudentAttendance.cs" />
     <Compile Include="Models\StudentDbContext.cs" />
+    <Compile Include="Models\StudentEnrolment.cs" />
     <Compile Include="Models\StudentGrades.cs" />
     <Compile Include="Models\StudentUserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -319,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703142110416_StudentAttendance.resx">
       <DependentUpon>201703142110416_StudentAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703150051288_StudentEnrolment.resx">
+      <DependentUpon>201703150051288_StudentEnrolment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
