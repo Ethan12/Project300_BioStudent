@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "LecturerProfile";
 }
+<!DOCTYPE html>
+<html>
 <head>
     <title>@ViewBag.Title.</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -78,4 +80,23 @@
             </dl>
         </div>
     </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="row">
+            <!--<p>&copy; @DateTime.Now.Year</p>-->
+            <!-- Student Login and Reistration Links -->
+            <div class="col-md-4 bottom studentLinks">
+                <ul class="nav navbar-nav pull-right">
+                    <li>@Html.ActionLink("Student Register", "StudentRegister", "Student")</li>
+                    <li>@Html.ActionLink("Student Login", "StudentLogin", "Student")</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
     </body>
+</html>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
