@@ -174,8 +174,7 @@ namespace Project300_BioStudent.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            //return View();
-            return RedirectToAction("LecturerProfile", "Account");
+            return View();
         }
 
         //
@@ -196,7 +195,7 @@ namespace Project300_BioStudent.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToLocal("LecturerProfile");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
