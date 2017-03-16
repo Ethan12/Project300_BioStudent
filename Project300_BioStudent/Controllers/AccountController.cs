@@ -12,6 +12,8 @@ using Project300_BioStudent.Models;
 using System.Data.Entity.ModelConfiguration;
 using System.Diagnostics;
 using System.IO;
+using Project300_BioStudent.DAL;
+using System.Net;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -20,12 +22,70 @@ namespace Project300_BioStudent.Controllers
     {
         StudentDbContext db = new StudentDbContext();
         ModuleDbContext mdb = new ModuleDbContext();
+        private ILecturerRepo lectrepo;
 
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
         public AccountController()
         {
+            lectrepo = new LecturerRepo(new ApplicationDbContext());
+        }
+        public ActionResult LecturerProfile()
+        {
+            string userId = User.Identity.GetUserId();
+            if (userId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ApplicationUser Lecturer = lectrepo.GetItemByid((string)userId);
+
+            if (Lecturer == null)
+            {
+                return HttpNotFound();
+            }
+            return View(Lecturer);
+
+        }
+        public FileContentResult UserPhotos()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                String userId = User.Identity.GetUserId();
+
+                if (userId == null)
+                {
+                    string fileName = HttpContext.Server.MapPath(@"~/Images/Blankimg.png");
+
+                    byte[] imageData = null;
+                    FileInfo fileInfo = new FileInfo(fileName);
+                    long imageFileLength = fileInfo.Length;
+                    FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    imageData = br.ReadBytes((int)imageFileLength);
+
+                    return File(imageData, "image/png");
+
+                }
+                // to get the user details to load user Image
+                var bdUsers = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+                var userImage = bdUsers.Users.Where(x => x.Id == userId).FirstOrDefault();
+
+                return new FileContentResult(userImage.ProfilePhoto, "image/jpeg");
+            }
+            else
+            {
+                string fileName = HttpContext.Server.MapPath(@"~/Images/Blankimg.png");
+
+                byte[] imageData = null;
+                FileInfo fileInfo = new FileInfo(fileName);
+                long imageFileLength = fileInfo.Length;
+                FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                imageData = br.ReadBytes((int)imageFileLength);
+                return File(imageData, "image/png");
+
+            }
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -244,7 +304,7 @@ namespace Project300_BioStudent.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("About", "Home");
+                    return RedirectToAction("LecturerProfile", "Account");
                 }
                 AddErrors(result);
             }
@@ -531,11 +591,6 @@ namespace Project300_BioStudent.Controllers
                 return Redirect(returnUrl);
             }
             return RedirectToAction("Index", "Home");
-        }
-
-        public ActionResult LecturerProfile()
-        {
-            return View();
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
