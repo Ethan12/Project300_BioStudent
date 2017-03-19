@@ -173,6 +173,8 @@ namespace Project300_BioStudent.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            returnUrl = "LecturerProfile.cshtml";
+
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }

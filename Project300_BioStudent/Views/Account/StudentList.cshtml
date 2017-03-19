@@ -34,9 +34,7 @@
                         <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
                     </a>
                         <ul class="nav navbar-nav navbar-right">
-                            <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                            <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                            
+                        <li>@Html.Partial("_LoginPartial")</li>
                         </ul>
                     </div>
                 </div>
@@ -58,7 +56,6 @@
             <ul class="nav nav-tabs">
                 <li><a>@Html.ActionLink("Student List", "StudentList", "Account")</a></li>
                 <li><a>@Html.ActionLink("Student Enroll", "Enroll", "Student")</a></li>
-                @*<li><a>@Html.ActionLink("Student Enroll", "EnrollStudent", "Account")</a></li>*@
                 <li><a>@Html.ActionLink("Grades", "Grades", "Account")</a></li>
                 <li><a>@Html.ActionLink("Attendance", "Attendance", "Account")</a></li>
                 <!--<li class="active"><a href="RAD.aspx">RAD</a></li>-->
