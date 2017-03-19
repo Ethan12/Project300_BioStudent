@@ -1,4 +1,4 @@
-﻿@model IEnumerable<project300_biostudent.models.studentuseraccount>
+﻿@model IEnumerable<Project300_BioStudent.Models.StudentUserAccount>
     @{
         ViewBag.Title = "StudentList";
     }
@@ -34,7 +34,14 @@
                         <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
                     </a>
                         <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
                         <li>@Html.Partial("_LoginPartial")</li>
+=======
+                            @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
+                            <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>*@
+                            
+                            <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
+>>>>>>> 3df6410caae8094fdc171957a71aab3484bc8b21
                         </ul>
                     </div>
                 </div>
@@ -105,6 +112,7 @@
                 }
             </div>
         </div>
+    </div>
     </body>
 </html>
 @section Scripts {
