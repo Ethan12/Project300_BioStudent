@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Project300_BioStudent.Models.StudentUserAccount>
+﻿@model IEnumerable<project300_biostudent.models.studentuseraccount>
     @{
         ViewBag.Title = "StudentList";
     }
@@ -53,6 +53,19 @@
                 </div>
             </header>
         </div>
+<div class="jumbotron backColour2">
+        <div class="container">            
+            <ul class="nav nav-tabs">
+                <li><a>@Html.ActionLink("Student List", "StudentList", "Account")</a></li>
+                <li><a>@Html.ActionLink("Student Enroll", "Enroll", "Student")</a></li>
+                @*<li><a>@Html.ActionLink("Student Enroll", "EnrollStudent", "Account")</a></li>*@
+                <li><a>@Html.ActionLink("Grades", "Grades", "Account")</a></li>
+                <li><a>@Html.ActionLink("Attendance", "Attendance", "Account")</a></li>
+                <!--<li class="active"><a href="RAD.aspx">RAD</a></li>-->
+
+            </ul>
+        </div>
+
         <div class="jumbotron backColour2">
             <div>
                 @using (Html.BeginForm())
