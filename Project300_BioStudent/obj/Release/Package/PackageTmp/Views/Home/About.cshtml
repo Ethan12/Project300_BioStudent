@@ -1,7 +1,38 @@
-﻿@{
+﻿@model Project300_BioStudent.Models.ApplicationUser
+@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div class="jumbotron backColour">
+    <header class="headerStyle">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="page-heading">
+                    <h1>
+                        <img src="@Url.Action("UserPhotos", "Home" )" style="width:160px;height:160px;
+                    margin: auto;
+                    -moz-border-radius: 60px;
+                    border-radius: 100px;
+                    padding: 6px;
+                    box-shadow: 0px 0px 20px #888;" />
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div>
+        <h4>User</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+
+        </dl>
+    </div>
+</div>

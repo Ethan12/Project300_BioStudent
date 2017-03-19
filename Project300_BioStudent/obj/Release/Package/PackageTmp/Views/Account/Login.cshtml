@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title.</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/styles/StyleSheet.css" rel="stylesheet" />
@@ -24,19 +25,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand colorLink" href="Index.cshtml">
-                        <img class="logo" src="~/images/BioStudent_Logo.png" /></a>
                     <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
                 </div>
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
+                    </a>
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
-                        <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                        @*<li>
-                            <a href="LecturerProfile.html">Profile</a>
-                        </li>
-                        *@
+                        <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>                        
                     </ul>
                 </div>
             </div>
@@ -60,8 +58,7 @@
             <section id="loginForm">
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                 {
-                    @Html.AntiForgeryToken()
-                
+                    @Html.AntiForgeryToken()                
                 <hr />
                 <div class="form-group">
                     @*@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })*@
