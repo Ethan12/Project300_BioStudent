@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:jeef.database.windows.net,1433;Initial Catalog=jeefdb;Persist Security Info=False;User ID=biostudent;Password=fingerprint123**;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ethan\\Desktop\\Project300_BioStudent\\Project300_BioStudent\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="PhotonContext-Web.config Connection String" description="PhotonContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=PhotonContext-20170314152654; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|PhotonContext-20170314152654.mdf" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ethan\\Desktop\\Project300_BioStudent\\Project300_BioStudent\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PhotonContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ellie-Mai\ Flanagan\\Desktop\\Project300_BioStudent\\Project300_BioStudent\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>

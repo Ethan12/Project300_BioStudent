@@ -1,13 +1,11 @@
-﻿@{
-    ViewBag.Title = "Enroll Fail";
-
+﻿@model IEnumerable<Project300_BioStudent.Models.Modules>
+@{
+    ViewBag.Title = "Create Module";
 }
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title.</title>
+    <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/styles/StyleSheet.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
@@ -35,10 +33,11 @@
                         <img src='@Url.Content("~/images/BioStudent_Logo.png")' class="logo" />
                     </a>
                     <ul class="nav navbar-nav navbar-right">
-                        @*<li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
+                        <li>@Html.ActionLink("Lecture Register", "Register", "Account")</li>
                         <li>@Html.ActionLink("Lecture Login", "Login", "Account")</li>
-                        *@
-                            <li>@Html.ActionLink("Lecturer Profile", "LecturerProfile", "Account")</li>
+                        @*<li>
+                                <a href="LecturerProfile.html">Profile</a>
+                            </li>*@
                     </ul>
                 </div>
             </div>
@@ -49,18 +48,49 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>Enrollment Failure</h1>
-                        <p class="small" />
-                        <span class="subheading">Please try again and follow the instructions carefully.</span>
-
+                        <h1>Student Listing</h1>
                     </div>
                 </div>
             </div>
         </header>
     </div>
+    <div class="jumbotron backColour2">
+        <div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @*@Html.DisplayNameFor(model => model.ModuleName)*@
+                                Module Name
+                            </th>
+                            <th>
+                                @*@Html.DisplayNameFor(model => model.LecturerId)*@
+                                Lecturer Id
+                            </th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ModuleName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LecturerId)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
 </body>
 </html>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
