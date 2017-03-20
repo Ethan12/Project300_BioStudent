@@ -147,10 +147,11 @@ namespace Project300_BioStudent.Controllers
             return View();
         }
 
-        public ActionResult Grades()
-        {
-            return View();
-        }
+        //public ActionResult AverageGrades()
+        //{
+        //    string student = StudentUserAccount
+        //    return View(lectrepo.StudentGrades.Average())
+        //}
 
         //
         // GET: /Account/Login

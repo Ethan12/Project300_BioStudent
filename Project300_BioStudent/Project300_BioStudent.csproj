@@ -189,6 +189,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ModulesController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentEnrolmentsController.cs" />
+    <Compile Include="Controllers\StudentGradesController.cs" />
     <Compile Include="DAL\ILecturerRepo.cs" />
     <Compile Include="DAL\LecturerRepo.cs" />
     <Compile Include="Global.asax.cs">
@@ -323,6 +325,16 @@
     <Content Include="Views\Modules\Details.cshtml" />
     <Content Include="Views\Modules\Edit.cshtml" />
     <Content Include="Views\Modules\Index.cshtml" />
+    <Content Include="Views\StudentEnrolments\Create.cshtml" />
+    <Content Include="Views\StudentEnrolments\Delete.cshtml" />
+    <Content Include="Views\StudentEnrolments\Details.cshtml" />
+    <Content Include="Views\StudentEnrolments\Edit.cshtml" />
+    <Content Include="Views\StudentEnrolments\Index.cshtml" />
+    <Content Include="Views\StudentGrades\Create.cshtml" />
+    <Content Include="Views\StudentGrades\Delete.cshtml" />
+    <Content Include="Views\StudentGrades\Details.cshtml" />
+    <Content Include="Views\StudentGrades\Edit.cshtml" />
+    <Content Include="Views\StudentGrades\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
