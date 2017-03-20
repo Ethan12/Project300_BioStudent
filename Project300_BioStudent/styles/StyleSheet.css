@@ -774,3 +774,11 @@ h2 {
     background-image: url(../images/mylogo.png);
     background-repeat: no-repeat;
 }
+
+.links {
+    margin-top:5px;
+}
+
+a {
+    margin-top: -5px;
+}

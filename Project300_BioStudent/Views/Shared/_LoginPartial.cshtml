@@ -5,28 +5,16 @@
     {
     @Html.AntiForgeryToken()
 
-<<<<<<< HEAD
-    <ul class="nav navbar-nav navbar-right">
-        @*<li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>*@
+    <div class="nav navbar-nav navbar-right">        
         <li>@Html.ActionLink("Lecture Profile", "LecturerProfile", "Account")</li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-    </ul>
-=======
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
-                <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
-            </li>
-        </ul>
->>>>>>> 3df6410caae8094fdc171957a71aab3484bc8b21
+    </div>
     }
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+    <div class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Lecturer Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Lecturer Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </div>
 }
