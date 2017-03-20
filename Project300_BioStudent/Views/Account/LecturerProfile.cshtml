@@ -24,7 +24,6 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!--@Html.ActionLink("~/images/BioStudent_Logo.png", "Index", "Home", new { area = "" }, new { @class = "navbar-brand logo" })-->
-                    <li>@Html.Partial("_LoginPartial")</li>
                 </div>
                 <!-- Lecturer Login and Reistration Links -->
                 <div class="collapse navbar-collapse colorLinks" id="bs-example-navbar-collapse-1">
@@ -38,7 +37,7 @@
             </div>
         </nav>
     </div>
-    <div class="jumbotron backColour">
+@*    <div class="jumbotron backColour">
         <header class="headerStyle">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -78,6 +77,45 @@
                 </dd>
             </dl>
         </div>
+    </div>*@
+
+    <div class="jumbotron backColour">
+        <header class="headerStyle">
+            <!--<div class="container">-->
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 col-md-2 col-md-offset-1">
+                    <div class="profileImg">
+                        <h1>
+                            <img src="@Url.Action("UserPhotos", "Account" )" style="width:160px;height:160px;
+                    margin: auto;
+                    -moz-border-radius: 60px;
+                    border-radius: 100px;
+                    padding: 6px;
+                    box-shadow: 0px 0px 20px #888;" />
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-md-7 col-md-offset-1">
+                    <div>
+                        <h1>Lecturer's name</h1>
+                        <p class="small" />
+                        <span class="subheading">field of study</span>
+                        <br />
+                        <span class="subheading">institute</span>
+                        <span class="LogReg">
+                            <!--class="subheading">Inviting text goes here-->
+                            <!--<asp:linkbutton id="linkLogin" onclick="linkLogin_Click" runat="server" text="Log-In" />
+                                |
+                                <asp:linkbutton id="linkRegister" onclick="linkRegister_Click" runat="server" text="Register" />
+                                -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--
+            </div>
+            -->
+        </header>
     </div>
 <div class="jumbotron backColour2">
         <div class="container">            

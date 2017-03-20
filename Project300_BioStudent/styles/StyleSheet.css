@@ -775,10 +775,21 @@ h2 {
     background-repeat: no-repeat;
 }
 
-.links {
-    margin-top:5px;
-}
+/*.links {
+    margin-top: 5px;
+}*/
 
-a {
-    margin-top: -5px;
+/*a {
+    margin-top: -15px;
+}*/
+
+.navbar-custom .nav li a {
+    color: #0085a1;
+    padding-right: 45px;
+    padding-top: 0px;
+
+/* Positioning Profile Image */
+
+.backColour .profileImg {
+    margin-top: 50px;
 }
