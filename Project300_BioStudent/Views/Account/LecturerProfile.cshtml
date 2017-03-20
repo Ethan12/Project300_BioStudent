@@ -37,100 +37,98 @@
             </div>
         </nav>
     </div>
-@*    <div class="jumbotron backColour">
-        <header class="headerStyle">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="page-heading">
-                        <h1>
-                            <img src="@Url.Action("UserPhotos", "Account" )" style="width:200px;height:200px;
-                                margin: auto;
-                                -moz-border-radius: 60px;
-                                border-radius: 100px;
-                                padding: 6px;
-                                box-shadow: 0px 0px 20px #888;" />
-                        </h1>
+    @*    <div class="jumbotron backColour">
+            <header class="headerStyle">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="page-heading">
+                            <h1>
+                                <img src="@Url.Action("UserPhotos", "Account" )" style="width:200px;height:200px;
+                                    margin: auto;
+                                    -moz-border-radius: 60px;
+                                    border-radius: 100px;
+                                    padding: 6px;
+                                    box-shadow: 0px 0px 20px #888;" />
+                            </h1>
 
+                        </div>
                     </div>
                 </div>
+            </header>
+            <div>
+                <dl class="dl-horizontal">
+                    <dt>
+                        Name:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.FullName)
+                    </dd>
+                    <dt>
+                        Institute:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Institute)
+                    </dd>
+                    <dt>
+                        Teaching Field:
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.TeachingField)
+                    </dd>
+                </dl>
             </div>
-        </header>
-        <div>
-            <dl class="dl-horizontal">
-                <dt>
-                    Name:
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.FullName)
-                </dd>
-                <dt>
-                    Institute:
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Institute)
-                </dd>
-                <dt>
-                    Teaching Field:
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.TeachingField)
-                </dd>
-            </dl>
-        </div>
-    </div>*@
-
+        </div>*@
     @*<div class="jumbotron backColour">*@
-<div>
+    <div>
         <header class="headerStyle">
             <!--<div class="container">-->
             <div class="row">
                 @*<div class="col-lg-1 col-lg-offset-2 col-md-2 col-md-offset-1">*@
                 <div class="profileImg col-md-5">
                     <div>
-                            <img src="@Url.Action("UserPhotos", "Account" )" style=" width:300px;height:300px;
-                                margin-top:100px;                                
-                                /*margin: auto;*/
+                        <img src="@Url.Action("UserPhotos", "Account" )" style="width:300px;height:300px;
+                                margin-top:100px;
                                 -moz-border-radius: 60px;
                                 border-radius: 100px;
                                 text-align:center;
                                 padding: 6px;
                                 box-shadow: 0px 0px 20px #CCC;" />
-                        
+
                     </div>
                 </div>
                 @*<div class="col-lg-5 col-lg-offset-2 col-md-7 col-md-offset-1">*@
                 <div class="profileInfo col-md-7">
-@*<div>
-            <dl class="dl-horizontal">
-                <dt>
-                    Name:
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.FullName)
-                </dd>
-                <dt>
-                    Institute:
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Institute)
-                </dd>
-                <dt>
-                    Teaching Field:
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.TeachingField)
-                </dd>
-            </dl>
-        </div>
-</div>*@
-                    
-                        <h2>Name:</h2>
-                        <p>@Html.DisplayFor(model => model.FullName)</p>
-                        <h2>Teaching Field:</h2>
-                        <p>@Html.DisplayFor(model => model.TeachingField)</p>
-                        <h2>Institute:</h2>
-                        <p>@Html.DisplayFor(model => model.Institute)</p>
-                    
+                    @*<div>
+                                    <dl class="dl-horizontal">
+                                        <dt>
+                                            Name:
+                                        </dt>
+                                        <dd>
+                                            @Html.DisplayFor(model => model.FullName)
+                                        </dd>
+                                        <dt>
+                                            Institute:
+                                        </dt>
+                                        <dd>
+                                            @Html.DisplayFor(model => model.Institute)
+                                        </dd>
+                                        <dt>
+                                            Teaching Field:
+                                        </dt>
+                                        <dd>
+                                            @Html.DisplayFor(model => model.TeachingField)
+                                        </dd>
+                                    </dl>
+                                </div>
+                        </div>*@
+
+                    <h2>Name:</h2>
+                    <p>@Html.DisplayFor(model => model.FullName)</p>
+                    <h2>Teaching Field:</h2>
+                    <p>@Html.DisplayFor(model => model.TeachingField)</p>
+                    <h2>Institute:</h2>
+                    <p>@Html.DisplayFor(model => model.Institute)</p>
+
                 </div>
             </div>
             <!--
@@ -138,33 +136,31 @@
             -->
         </header>
     </div>
-<div class="jumbotron backColour2">
-        <div class="container">            
+    <div class="jumbotron backColour2">
+        <div class="container">
             <ul class="nav nav-tabs">
-                <li><a>@Html.ActionLink("Student List", "StudentList", "Account")</a></li>
+                <li><a>@Html.ActionLink("Student List", "TestStudentList", "Account")</a></li>
                 <li><a>@Html.ActionLink("Student Enroll", "EnrollStudent", "Account")</a></li>
                 <li><a>@Html.ActionLink("Grades", "Grades", "Account")</a></li>
                 <li><a>@Html.ActionLink("Attendance", "Attendance", "Account")</a></li>
-
             </ul>
         </div>
-    <div class="container body-content">
-        <hr />
-        <footer class="row">
-            <!--<p>&copy; @DateTime.Now.Year</p>-->
-            <!-- Student Login and Reistration Links -->
-            <div class="col-md-4 bottom studentLinks">
-                <ul class="nav navbar-nav pull-right">
-                    @*<li>@Html.ActionLink("Student Register", "StudentRegister", "Student")</li>
-                    <li>@Html.ActionLink("Student Login", "StudentLogin", "Student")</li>*@
-                </ul>
-            </div>
-        </footer>
+        <div class="container body-content">
+            <hr />
+            <footer class="row">
+                <!--<p>&copy; @DateTime.Now.Year</p>-->
+                <!-- Student Login and Reistration Links -->
+                <div class="col-md-4 bottom studentLinks">
+                    <ul class="nav navbar-nav pull-right">
+                        @*<li>@Html.ActionLink("Student Register", "StudentRegister", "Student")</li>
+                            <li>@Html.ActionLink("Student Login", "StudentLogin", "Student")</li>*@
+                    </ul>
+                </div>
+            </footer>
+        </div>
     </div>
-    </div>
-    </body>
+</body>
 </html>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

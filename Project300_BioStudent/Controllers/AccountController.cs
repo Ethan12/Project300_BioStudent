@@ -14,6 +14,8 @@ using System.Diagnostics;
 using System.IO;
 using Project300_BioStudent.DAL;
 using System.Net;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -118,29 +120,30 @@ namespace Project300_BioStudent.Controllers
             }
         }
 
-        public ActionResult StudentList()
+        public ActionResult TestStudentList()
         {
-             try
-             {
-                 return View(lectrepo.StudentUserAccounts.ToList());
-             }catch(ModelValidationException mve)
-             {
-                 Debug.WriteLine(mve.Message);
-                 return View();
-             }
+            //try
+            //{
+            //    return View(lectrepo.StudentUserAccounts.ToList());
+            //}catch(ModelValidationException mve)
+            //{
+            //    Debug.WriteLine(mve.Message);
+            //    return View();
+            //}
+            IList<StudentUserAccount> students = new List<StudentUserAccount>();
+            var query = (from student in lectrepo.Enrolment
+                         join modules in lectrepo.Modules
+                         on student.ModuleId equals modules.Id
+                         where (modules.LecturerId == Session["Id"].ToString())
+                         select student);
+
+            return View(students);
 
         }
 
         public ActionResult CreateModule()
         {
-            try
-            {
                 return View(lectrepo.Modules.ToList());
-            }catch(ModelValidationException mve)
-            {
-                Debug.WriteLine(mve.Message);
-                return View();
-            }
         }
         public ActionResult Attendance()
         {

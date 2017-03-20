@@ -1,5 +1,11 @@
 ﻿@model IEnumerable<Project300_BioStudent.Models.StudentUserAccount>
 
+@{
+    ViewBag.Title = "TestStudentList";
+}
+
+<h2>TestStudentList</h2>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -27,6 +33,8 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.StudentNum)
+        </td>
+        <td>
         </td>
     </tr>
 }
