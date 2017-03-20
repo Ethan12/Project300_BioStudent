@@ -16,6 +16,7 @@ using Project300_BioStudent.DAL;
 using System.Net;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Entity.Core;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -130,14 +131,46 @@ namespace Project300_BioStudent.Controllers
             //    Debug.WriteLine(mve.Message);
             //    return View();
             //}
-            IList<StudentUserAccount> students = new List<StudentUserAccount>();
-            var query = (from student in lectrepo.Enrolment
-                         join modules in lectrepo.Modules
-                         on student.ModuleId equals modules.Id
-                         where (modules.LecturerId == Session["Id"].ToString())
-                         select student);
+            /*  IList<StudentUserAccount> students = new List<StudentUserAccount>();
+              var query = (from student in lectrepo.Enrolment
+                           join modules in lectrepo.Modules
+                           on student.ModuleId equals modules.Id
+                           where (modules.LecturerId == Session["Id"].ToString())
+                           select student);
 
-            return View(students);
+              return View(students);*/
+
+            string lecturerID = User.Identity.GetUserId();
+            var moduleList = lectrepo.Modules.Where(p => p.LecturerId == lecturerID);
+
+            List<int> studentIDList = new List<int>();
+
+            foreach(Modules module in moduleList)
+            {
+                int moduleID = module.Id;
+               var studentEnrolmentList = lectrepo.Enrolment.Where(p => p.ModuleId == moduleID);
+
+                try
+                {
+                    foreach (StudentEnrolment enrolment in studentEnrolmentList)
+                    {
+                        int studentID = enrolment.Id;
+                        studentIDList.Add(studentID);
+                    }
+                }catch(EntityCommandExecutionException ece)
+                {
+                    Debug.WriteLine("EX: " + ece.InnerException);
+                }
+            }
+
+             List<StudentUserAccount> students = new List<StudentUserAccount>();
+
+             foreach(int id in studentIDList)
+             {
+                 students.Add(lectrepo.StudentUserAccounts.Single(p => p.Id == id));
+             }
+
+             return View(students);
 
         }
 
