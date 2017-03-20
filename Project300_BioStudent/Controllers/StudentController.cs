@@ -25,7 +25,7 @@ namespace Project300_BioStudent.Controllers
         {
             try
             {
-                using (StudentDbContext db = new StudentDbContext())
+                using (ApplicationDbContext db = new ApplicationDbContext())
                 {
                     return View(db.StudentUserAccounts.ToList());
                 }
@@ -79,7 +79,7 @@ namespace Project300_BioStudent.Controllers
                 if (userId != -1)
                 {
 
-                    using (StudentDbContext db = new StudentDbContext())
+                    using (ApplicationDbContext db = new ApplicationDbContext())
                     {
                         try
                         {
@@ -129,7 +129,7 @@ namespace Project300_BioStudent.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (StudentDbContext db = new StudentDbContext())
+                using (ApplicationDbContext db = new ApplicationDbContext())
                 {
                     db.StudentUserAccounts.Add(acc);
                     db.SaveChanges();
@@ -148,7 +148,7 @@ namespace Project300_BioStudent.Controllers
         [HttpPost]
         public ActionResult StudentLogin(StudentUserAccount studentUser)
         {
-            using (StudentDbContext db = new StudentDbContext())
+            using (ApplicationDbContext db = new ApplicationDbContext())
             {
                 try
                 {

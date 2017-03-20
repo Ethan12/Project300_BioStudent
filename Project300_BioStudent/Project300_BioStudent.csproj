@@ -204,10 +204,8 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ModuleDbContext.cs" />
     <Compile Include="Models\Modules.cs" />
     <Compile Include="Models\StudentAttendance.cs" />
-    <Compile Include="Models\StudentDbContext.cs" />
     <Compile Include="Models\StudentEnrolment.cs" />
     <Compile Include="Models\StudentGrades.cs" />
     <Compile Include="Models\StudentUserAccount.cs" />
