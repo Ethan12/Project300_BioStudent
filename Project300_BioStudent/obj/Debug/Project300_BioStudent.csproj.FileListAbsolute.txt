@@ -522,3 +522,7 @@ C:\Users\s00152559\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug
 C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentEnrolment.resources
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentEnrolment.resources
 C:\Users\Ellie-Mai Flanagan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.csprojResolveAssemblyReference.cache
+C:\Users\s00151196\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
+C:\Users\s00151196\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.Modules.resources
+C:\Users\s00151196\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
+C:\Users\s00151196\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentEnrolment.resources

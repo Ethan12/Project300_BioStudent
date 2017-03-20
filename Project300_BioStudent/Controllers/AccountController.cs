@@ -20,16 +20,16 @@ namespace Project300_BioStudent.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        StudentDbContext db = new StudentDbContext();
-        ModuleDbContext mdb = new ModuleDbContext();
-        private ILecturerRepo lectrepo;
+        //StudentDbContext db = new StudentDbContext();
+        //ModuleDbContext mdb = new ModuleDbContext();
+        private ApplicationDbContext lectrepo = new ApplicationDbContext();
 
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
         public AccountController()
         {
-            lectrepo = new LecturerRepo(new ApplicationDbContext());
+            //lectrepo = new LecturerRepo(new ApplicationDbContext());
         }
         public ActionResult LecturerProfile()
         {
@@ -38,7 +38,7 @@ namespace Project300_BioStudent.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser Lecturer = lectrepo.GetItemByid((string)userId);
+            ApplicationUser Lecturer = lectrepo.Users.Find(userId);
 
             if (Lecturer == null)
             {
@@ -122,7 +122,7 @@ namespace Project300_BioStudent.Controllers
         {
              try
              {
-                 return View(db.StudentUserAccounts.ToList());
+                 return View(lectrepo.StudentUserAccounts.ToList());
              }catch(ModelValidationException mve)
              {
                  Debug.WriteLine(mve.Message);
@@ -135,29 +135,13 @@ namespace Project300_BioStudent.Controllers
         {
             try
             {
-                return View(mdb.Modules.ToList());
+                return View(lectrepo.Modules.ToList());
             }catch(ModelValidationException mve)
             {
                 Debug.WriteLine(mve.Message);
                 return View();
             }
         }
-
-        public ActionResult TestStudentList()
-        {
-            //try
-            //{
-            //    return View(db.StudentUserAccounts.ToList());
-            //}
-            //catch (ModelValidationException mve)
-            //{
-            //    Debug.WriteLine(mve.Message);
-            //    return View();
-            //}
-            return View(db.StudentUserAccounts.ToList());
-
-        }
-
         public ActionResult Attendance()
         {
             return View();
