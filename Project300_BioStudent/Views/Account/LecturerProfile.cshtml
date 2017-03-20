@@ -43,12 +43,12 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
                         <h1>
-                            <img src="@Url.Action("UserPhotos", "Account" )" style="width:160px;height:160px;
-                    margin: auto;
-                    -moz-border-radius: 60px;
-                    border-radius: 100px;
-                    padding: 6px;
-                    box-shadow: 0px 0px 20px #888;" />
+                            <img src="@Url.Action("UserPhotos", "Account" )" style="width:200px;height:200px;
+                                margin: auto;
+                                -moz-border-radius: 60px;
+                                border-radius: 100px;
+                                padding: 6px;
+                                box-shadow: 0px 0px 20px #888;" />
                         </h1>
 
                     </div>
@@ -79,37 +79,58 @@
         </div>
     </div>*@
 
-    <div class="jumbotron backColour">
+    @*<div class="jumbotron backColour">*@
+<div>
         <header class="headerStyle">
             <!--<div class="container">-->
             <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 col-md-2 col-md-offset-1">
-                    <div class="profileImg">
-                        <h1>
-                            <img src="@Url.Action("UserPhotos", "Account" )" style="width:160px;height:160px;
-                    margin: auto;
-                    -moz-border-radius: 60px;
-                    border-radius: 100px;
-                    padding: 6px;
-                    box-shadow: 0px 0px 20px #888;" />
-                        </h1>
+                @*<div class="col-lg-1 col-lg-offset-2 col-md-2 col-md-offset-1">*@
+                <div class="profileImg col-md-5">
+                    <div>
+                            <img src="@Url.Action("UserPhotos", "Account" )" style=" width:300px;height:300px;
+                                margin-top:100px;                                
+                                /*margin: auto;*/
+                                -moz-border-radius: 60px;
+                                border-radius: 100px;
+                                text-align:center;
+                                padding: 6px;
+                                box-shadow: 0px 0px 20px #CCC;" />
+                        
                     </div>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-md-7 col-md-offset-1">
-                    <div>
-                        <h1>Lecturer's name</h1>
-                        <p class="small" />
-                        <span class="subheading">field of study</span>
-                        <br />
-                        <span class="subheading">institute</span>
-                        <span class="LogReg">
-                            <!--class="subheading">Inviting text goes here-->
-                            <!--<asp:linkbutton id="linkLogin" onclick="linkLogin_Click" runat="server" text="Log-In" />
-                                |
-                                <asp:linkbutton id="linkRegister" onclick="linkRegister_Click" runat="server" text="Register" />
-                                -->
-                        </span>
-                    </div>
+                @*<div class="col-lg-5 col-lg-offset-2 col-md-7 col-md-offset-1">*@
+                <div class="profileInfo col-md-7">
+@*<div>
+            <dl class="dl-horizontal">
+                <dt>
+                    Name:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FullName)
+                </dd>
+                <dt>
+                    Institute:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Institute)
+                </dd>
+                <dt>
+                    Teaching Field:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TeachingField)
+                </dd>
+            </dl>
+        </div>
+</div>*@
+                    
+                        <h2>Name:</h2>
+                        <p>@Html.DisplayFor(model => model.FullName)</p>
+                        <h2>Teaching Field:</h2>
+                        <p>@Html.DisplayFor(model => model.TeachingField)</p>
+                        <h2>Institute:</h2>
+                        <p>@Html.DisplayFor(model => model.Institute)</p>
+                    
                 </div>
             </div>
             <!--
@@ -124,7 +145,6 @@
                 <li><a>@Html.ActionLink("Student Enroll", "EnrollStudent", "Account")</a></li>
                 <li><a>@Html.ActionLink("Grades", "Grades", "Account")</a></li>
                 <li><a>@Html.ActionLink("Attendance", "Attendance", "Account")</a></li>
-                <!--<li class="active"><a href="RAD.aspx">RAD</a></li>-->
 
             </ul>
         </div>
