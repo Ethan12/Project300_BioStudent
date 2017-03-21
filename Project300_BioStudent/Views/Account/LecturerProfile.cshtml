@@ -82,7 +82,7 @@
     <div>
         <header class="headerStyle">
             <!--<div class="container">-->
-            <div class="row">
+            <div class="row profile">
                 @*<div class="col-lg-1 col-lg-offset-2 col-md-2 col-md-offset-1">*@
                 <div class="profileImg col-md-5">
                     <div>
@@ -97,36 +97,12 @@
                     </div>
                 </div>
                 @*<div class="col-lg-5 col-lg-offset-2 col-md-7 col-md-offset-1">*@
-                <div class="profileInfo col-md-7">
-                    @*<div>
-                                    <dl class="dl-horizontal">
-                                        <dt>
-                                            Name:
-                                        </dt>
-                                        <dd>
-                                            @Html.DisplayFor(model => model.FullName)
-                                        </dd>
-                                        <dt>
-                                            Institute:
-                                        </dt>
-                                        <dd>
-                                            @Html.DisplayFor(model => model.Institute)
-                                        </dd>
-                                        <dt>
-                                            Teaching Field:
-                                        </dt>
-                                        <dd>
-                                            @Html.DisplayFor(model => model.TeachingField)
-                                        </dd>
-                                    </dl>
-                                </div>
-                        </div>*@
-
-                    <h2>Name:</h2>
+                <div class="profileInfo col-md-7">    
+                    <h2><i>Name:</i></h2>
                     <p>@Html.DisplayFor(model => model.FullName)</p>
-                    <h2>Teaching Field:</h2>
+                    <h2><i>Teaching Field:</i></h2>
                     <p>@Html.DisplayFor(model => model.TeachingField)</p>
-                    <h2>Institute:</h2>
+                    <h2><i>Institute:</i></h2>
                     <p>@Html.DisplayFor(model => model.Institute)</p>
 
                 </div>

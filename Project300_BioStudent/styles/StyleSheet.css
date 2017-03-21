@@ -394,8 +394,7 @@ article img {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        z-index: 3;
+        width: 100%;        
         font-family: 'Verdana Pro';
         font-size: 14px;
     }
@@ -621,21 +620,6 @@ article img {
     }
 }
 
-/*Map Styling*/
-
-.controls {
-    z-index: 0;
-    position: absolute;
-    left: 117px;
-    top: 0px;
-    margin-top: 18px;
-}
-
-#map {
-    height: 400px;
-    width: 100%;
-}
-
 .firstHeading {
     color: black;
 }
@@ -693,7 +677,7 @@ legend{
 }*/
 
 h2 {
-    color: blue;
+    color: #4dc9f8;
 }
 
 /*Module Table*/
@@ -803,7 +787,7 @@ p {
 
 
 .profileInfo {
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
     .profileInfo h2 {
@@ -818,18 +802,6 @@ p {
         text-align:left;
     }
 
-header profileInfo {
-    margin-top: 150px;
-}
-
-    header h2 {
-        color: #4dc9f8;
-        font-size: 30px;
-        text-align:left;
-    }
-
-    header p {
-        color: #ccd1d3;
-        font-weight: bold;
-        text-align:left;
+    .profile {
+        border-color: aquamarine;
     }

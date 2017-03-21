@@ -551,3 +551,15 @@ C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Ne
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Web.Http.xml
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Web.Http.WebHost.xml
 C:\Users\Ethan\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ProfilePhoto.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\Project300_BioStudent.dll.config
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Net.Http.Formatting.dll
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Web.Http.dll
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Web.Http.WebHost.dll
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Net.Http.Formatting.xml
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Web.Http.xml
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\bin\System.Web.Http.WebHost.xml
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentGrades.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.Modules.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentEnrolment.resources
+C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ProfilePhoto.resources
