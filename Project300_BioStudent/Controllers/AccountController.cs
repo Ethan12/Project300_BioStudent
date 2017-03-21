@@ -63,6 +63,7 @@ namespace Project300_BioStudent.Controllers
 
         public ActionResult Attendance()
         {
+            //TO DO ERROR HANDLING FOR DEVICE POFFLINE
             string data = new WebClient().DownloadString(BIOSTUDENT_DEVICE);
             Debug.WriteLine("DATA: " + data.Substring(1, data.Length - 2));
             dynamic json = JObject.Parse(data.Substring(1, data.Length - 2));
