@@ -74,7 +74,22 @@ namespace Project300_BioStudent.Controllers
                 var bdUsers = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
                 var userImage = bdUsers.Users.Where(x => x.Id == userId).FirstOrDefault();
 
-                return new FileContentResult(userImage.ProfilePhoto, "image/jpeg");
+                if (userImage.ProfilePhoto != null)
+                {
+                        return new FileContentResult(userImage.ProfilePhoto, "image/jpeg");
+
+                }else
+                {
+                    string fileName = HttpContext.Server.MapPath(@"~/Images/Blankimg.png");
+
+                    byte[] imageData = null;
+                    FileInfo fileInfo = new FileInfo(fileName);
+                    long imageFileLength = fileInfo.Length;
+                    FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    imageData = br.ReadBytes((int)imageFileLength);
+                    return File(imageData, "image/png");
+                }
             }
             else
             {
