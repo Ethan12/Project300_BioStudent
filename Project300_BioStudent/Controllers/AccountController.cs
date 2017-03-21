@@ -252,7 +252,7 @@ namespace Project300_BioStudent.Controllers
                 var bdUsers = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
                 var userImage = bdUsers.Users.Where(x => x.Id == userId).FirstOrDefault();
 
-                if (userImage.ProfilePhoto != null)
+                if (userImage.ProfilePhoto != null && userImage.ProfilePhoto.Length > 0)
                 {
                         return new FileContentResult(userImage.ProfilePhoto, "image/jpeg");
 
@@ -493,6 +493,7 @@ namespace Project300_BioStudent.Controllers
         {
             if (ModelState.IsValid)
             {
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FullName = model.FullName, TeachingField = model.TeachingField, Institute = model.Institute };
                 byte[] imageData = null;
                 if (Request.Files.Count > 0)
                 {
@@ -502,9 +503,12 @@ namespace Project300_BioStudent.Controllers
                     {
                         imageData = binary.ReadBytes(poImgFile.ContentLength);
                     }
+                    user.ProfilePhoto = imageData;
+
+                }else
+                {
+                    user.ProfilePhoto = null;
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FullName = model.FullName, TeachingField = model.TeachingField, Institute = model.Institute };
-                user.ProfilePhoto = imageData;
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
