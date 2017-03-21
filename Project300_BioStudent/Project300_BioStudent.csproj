@@ -313,11 +313,10 @@
     <Content Include="Views\Student\Enroll.cshtml">
       <BrowseToURL>~/Student/Enroll</BrowseToURL>
     </Content>
-    <Content Include="Views\Account\StudentList.cshtml" />
     <Content Include="Views\Account\EnrollStudent.cshtml" />
     <Content Include="Views\Student\EnrollSuccess.cshtml" />
     <Content Include="Views\Student\EnrollFail.cshtml" />
-    <Content Include="Views\Account\TestStudentList.cshtml" />
+    <Content Include="Views\Account\StudentList.cshtml" />
     <Content Include="Views\Account\CreateModule.cshtml" />
     <Content Include="Views\Account\LecturerProfile.cshtml" />
     <Content Include="Views\Modules\Create.cshtml" />

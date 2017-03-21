@@ -121,7 +121,7 @@ namespace Project300_BioStudent.Controllers
             }
         }
 
-        public ActionResult TestStudentList()
+        public ActionResult StudentList()
         {
             //try
             //{
