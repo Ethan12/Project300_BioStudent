@@ -334,6 +334,10 @@
     <Content Include="Views\StudentGrades\Details.cshtml" />
     <Content Include="Views\StudentGrades\Edit.cshtml" />
     <Content Include="Views\StudentGrades\Index.cshtml" />
+    <Content Include="Views\Account\Attendance.cshtml" />
+    <Content Include="Views\Account\SetAttendance.cshtml" />
+    <Content Include="Views\Account\ChangeAttendance.cshtml" />
+    <Content Include="Views\Account\ClearAttendance.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

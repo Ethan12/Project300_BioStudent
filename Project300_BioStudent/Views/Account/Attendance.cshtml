@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Attendance";
+}
+
+<h2>Attendance</h2>
+@if(ViewBag.BioStudent_connected != "False"){
+  if (ViewBag.BioStudent_attendance != "False")
+    {
+        //Attendance already set
+        <h3>Module Name: @ViewBag.BioStudent_modname</h3>
+        <h3>Module Duration: @ViewBag.BioStudent_modduration minutes</h3>
+        @Html.ActionLink("Change Attendance", "SetAttendance", "Account");
+        <br />
+        <br />
+        <h4>Please note that attendance information is automatically erased after the class duration has elapsed.</h4>
+
+    }
+    else
+    {
+        Response.Redirect("~/Account/SetAttendance");
+    }
+}else
+{
+    <p>Device offline</p>
+}
+

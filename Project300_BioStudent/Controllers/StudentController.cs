@@ -62,7 +62,7 @@ namespace Project300_BioStudent.Controllers
                     var responseString = await response.Content.ReadAsStringAsync();
                 }
 
-                System.Threading.Thread.Sleep(8000);
+                System.Threading.Thread.Sleep(10000);
 
                 var userId = -1;
 
@@ -86,6 +86,7 @@ namespace Project300_BioStudent.Controllers
                             var studentUser = db.StudentUserAccounts.Single(u => u.StudentNum == ac.StudentNum);
                             if(studentUser != null)
                             {
+                                Session["FingerprintID"] = userId;
                                 studentUser.FingerprintID = userId;
                                 db.SaveChanges();
                                 return RedirectToAction("EnrollSuccess");

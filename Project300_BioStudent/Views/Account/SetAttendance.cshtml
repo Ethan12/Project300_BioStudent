@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Project300_BioStudent.Models.Modules>
+@{
+    ViewBag.Title = "SetAttendance";
+}
+
+<h2>SetAttendance</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+<h4>Module Name: </h4>
+foreach (var items in Model){
+@Html.DropDownList("ModName", new SelectList(Model.Distinct().ToList(), "ModuleName", "ModuleName", items.ModuleName));
+}
+<br />
+<h4>Class Duration</h4>
+<select id="ClassDuration" name="ClassDuration">
+    <option value="30">Half Hour</option>
+    <option selected="selected" value="60">Hour</option>
+    <option value="90">Hour & A Half</option>
+    <option value="120">Two Hours</option>
+    <option value="150">Two & A Half Hours</option>
+    <option value="180">Three Hours</option>
+</select>
+<input type="submit" value="Set Attendance" />
+}
+

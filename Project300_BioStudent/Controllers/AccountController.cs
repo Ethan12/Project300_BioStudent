@@ -17,6 +17,8 @@ using System.Net;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity.Core;
+using Newtonsoft.Json.Linq;
+using System.Net.Http;
 
 namespace Project300_BioStudent.Controllers
 {
@@ -26,6 +28,14 @@ namespace Project300_BioStudent.Controllers
         //StudentDbContext db = new StudentDbContext();
         //ModuleDbContext mdb = new ModuleDbContext();
         private ApplicationDbContext lectrepo = new ApplicationDbContext();
+
+        private const string BIOSTUDENT_ATTNSET = "https://api.particle.io/v1/devices/1c002b000d47343432313031/setatn?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
+        private const string BIOSTUDENT_MODNAMESET = "https://api.particle.io/v1/devices/1c002b000d47343432313031/sModuleName?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
+        private const string BIOSTUDENT_MODDURSET = "https://api.particle.io/v1/devices/1c002b000d47343432313031/sModDuration?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
+        private const string BIOSTUDENT_DEVICE = "https://api.particle.io/v1/devices?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
+        private const string BIOSTUDENT_ATTENDANCE = "https://api.particle.io/v1/devices/1c002b000d47343432313031/attendance/?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
+        private const string BIOSTUDENT_MODNAME = "https://api.particle.io/v1/devices/1c002b000d47343432313031/modulename/?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
+        private const string BIOSTUDENT_MODDURATION = "https://api.particle.io/v1/devices/1c002b000d47343432313031/moduledur/?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
 
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
@@ -50,6 +60,174 @@ namespace Project300_BioStudent.Controllers
             return View(Lecturer);
 
         }
+
+        public ActionResult Attendance()
+        {
+            string data = new WebClient().DownloadString(BIOSTUDENT_DEVICE);
+            Debug.WriteLine("DATA: " + data.Substring(1, data.Length - 2));
+            dynamic json = JObject.Parse(data.Substring(1, data.Length - 2));
+            ViewBag.BioStudent_connected = json.connected;
+
+            if (json.connected != "False")
+            {
+
+                data = new WebClient().DownloadString(BIOSTUDENT_ATTENDANCE);
+                json = JObject.Parse(data);
+                ViewBag.BioStudent_attendance = json.result;
+
+                data = new WebClient().DownloadString(BIOSTUDENT_MODNAME);
+                json = JObject.Parse(data);
+                ViewBag.BioStudent_modname = json.result;
+
+                data = new WebClient().DownloadString(BIOSTUDENT_MODDURATION);
+                json = JObject.Parse(data);
+                ViewBag.BioStudent_modduration = Convert.ToString(json.result);
+
+                return View();
+            }else
+            {
+                ViewBag.BioStudent_connected = "True";
+                return View();
+            }
+        }
+
+        public ActionResult SetAttendance()
+        {
+            var lecturerID = User.Identity.GetUserId();
+            var modules = lectrepo.Modules.Where(x => x.LecturerId == lecturerID);
+            return View(modules);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> SetAttendance(Modules module)
+        {
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "arg", Request.Form["ModName"] }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_MODNAMESET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if(json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "arg", Request.Form["ClassDuration"] }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_MODDURSET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if(json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "arg", "True" }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_ATTNSET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if (json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+            Response.Redirect("~/Account/Attendance");
+            return View();
+            }
+
+        public async Task<ActionResult> ClearAttendance()
+        {
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "arg", "" }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_MODNAMESET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if (json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "arg", "" }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_MODDURSET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if (json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "arg", "False" }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_ATTNSET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if (json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+            Response.Redirect("~/Account/Attendance");
+            return View();
+        }
+
+        public ActionResult ChangeAttendance()
+        {
+            return View();
+        }
+
         public FileContentResult UserPhotos()
         {
             if (User.Identity.IsAuthenticated)
@@ -192,10 +370,6 @@ namespace Project300_BioStudent.Controllers
         public ActionResult CreateModule()
         {
                 return View(lectrepo.Modules.ToList());
-        }
-        public ActionResult Attendance()
-        {
-            return View();
         }
 
         //public ActionResult AverageGrades()
