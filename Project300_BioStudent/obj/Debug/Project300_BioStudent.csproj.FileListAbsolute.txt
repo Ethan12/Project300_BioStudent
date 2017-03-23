@@ -563,3 +563,4 @@ C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentEnrolment.resources
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ProfilePhoto.resources
+C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ProfilePhoto.resources
