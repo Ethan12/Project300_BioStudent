@@ -32,6 +32,7 @@ namespace Project300_BioStudent.Controllers
         private const string BIOSTUDENT_ATTNSET = "https://api.particle.io/v1/devices/1c002b000d47343432313031/setatn?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
         private const string BIOSTUDENT_MODNAMESET = "https://api.particle.io/v1/devices/1c002b000d47343432313031/sModuleName?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
         private const string BIOSTUDENT_MODDURSET = "https://api.particle.io/v1/devices/1c002b000d47343432313031/sModDuration?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
+        private const string BIOSTUDENT_MODIDSET = "https://api.particle.io/v1/devices/1c002b000d47343432313031/sModID?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
         private const string BIOSTUDENT_DEVICE = "https://api.particle.io/v1/devices?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
         private const string BIOSTUDENT_ATTENDANCE = "https://api.particle.io/v1/devices/1c002b000d47343432313031/attendance/?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
         private const string BIOSTUDENT_MODNAME = "https://api.particle.io/v1/devices/1c002b000d47343432313031/modulename/?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
@@ -125,6 +126,25 @@ namespace Project300_BioStudent.Controllers
             {
                 var values = new Dictionary<string, string>
                 {
+                    { "arg", Request.Form["ModName"] }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_MODIDSET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if (json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
                     { "arg", Request.Form["ClassDuration"] }
 
             };
@@ -173,6 +193,25 @@ namespace Project300_BioStudent.Controllers
             };
                 var content = new FormUrlEncodedContent(values);
                 var response = await client.PostAsync(BIOSTUDENT_MODNAMESET, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine("RESPONSE: " + responseString);
+
+                dynamic json = JObject.Parse(responseString);
+                if (json.return_value != 1)
+                {
+                    ModelState.AddModelError("", "Something went wrong, please try again later");
+                }
+            }
+
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "arg", "" }
+
+            };
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(BIOSTUDENT_MODIDSET, content);
                 var responseString = await response.Content.ReadAsStringAsync();
                 Debug.WriteLine("RESPONSE: " + responseString);
 

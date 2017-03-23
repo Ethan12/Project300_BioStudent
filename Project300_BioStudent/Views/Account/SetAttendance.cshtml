@@ -67,7 +67,7 @@
     @Html.AntiForgeryToken();
 <h4>Module Name: </h4>
 foreach (var items in Model){
-@Html.DropDownList("ModName", new SelectList(Model.Distinct().ToList(), "ModuleName", "ModuleName", items.ModuleName));
+@Html.DropDownList("ModName", new SelectList(Model.Distinct().ToList(), "Id", "ModuleName", items.ModuleName));
 }
 <br />
 <h4>Class Duration</h4>
@@ -81,10 +81,6 @@ foreach (var items in Model){
 </select>
 <input type="submit" value="Set Attendance" />
 }
-
-
-
-
         <div class="container body-content">
             <hr />
             <footer class="row">
