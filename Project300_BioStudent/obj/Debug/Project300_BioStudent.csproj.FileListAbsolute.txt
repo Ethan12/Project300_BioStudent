@@ -563,9 +563,7 @@ C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentAttendance.resources
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.StudentEnrolment.resources
 C:\Users\S00154277\Desktop\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ProfilePhoto.resources
-<<<<<<< HEAD
 C:\Users\Joanne\Desktop\BioStudent\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.Migrations.ProfilePhoto.resources
-=======
 F:\NewCollege\Project300_BioStudent\Project300_BioStudent\bin\roslyn\csc.exe
 F:\NewCollege\Project300_BioStudent\Project300_BioStudent\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 F:\NewCollege\Project300_BioStudent\Project300_BioStudent\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -650,4 +648,3 @@ F:\NewCollege\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_B
 F:\NewCollege\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.csproj.GenerateResource.Cache
 F:\NewCollege\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.dll
 F:\NewCollege\Project300_BioStudent\Project300_BioStudent\obj\Debug\Project300_BioStudent.pdb
->>>>>>> d21e37b7c5b23249a02882c5c8d4121af5daafae
