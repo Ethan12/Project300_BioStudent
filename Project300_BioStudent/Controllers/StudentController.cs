@@ -49,7 +49,7 @@ namespace Project300_BioStudent.Controllers
 
             if (jsonDecoded.result != 1)
             {
-                string triggerUrl = "https://maker.ifttt.com/trigger/enroll_jeef/with/key/o-arvDPNPh5XbneGdmQLWn17n80o919r3WjxjTGWV2-";
+                string triggerUrl = "https://api.particle.io/v1/devices/1c002b000d47343432313031/enroll?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
                 string userUrl = "https://api.particle.io/v1/devices/1c002b000d47343432313031/userid/?access_token=f3665e22952ac82b1e7e9b1d5929b25f66915673";
                 using (var client = new HttpClient())
                 {
