@@ -88,7 +88,7 @@ namespace Project300_BioStudent.Controllers
                 return View();
             }else
             {
-                ViewBag.BioStudent_connected = "True";
+                ViewBag.BioStudent_connected = "False";
                 return View();
             }
         }
@@ -103,11 +103,13 @@ namespace Project300_BioStudent.Controllers
         [HttpPost]
         public async Task<ActionResult> SetAttendance(Modules module)
         {
+            int id = Convert.ToInt32(Request["ModName"]);
+            var modName = lectrepo.Modules.Where(x => x.Id == id).Select(y => y.ModuleName);
             using (var client = new HttpClient())
             {
                 var values = new Dictionary<string, string>
                 {
-                    { "arg", Request.Form["ModName"] }
+                    { "arg", modName.ToString() }
 
             };
                 var content = new FormUrlEncodedContent(values);
